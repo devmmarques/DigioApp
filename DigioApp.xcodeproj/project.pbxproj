@@ -7,12 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B21A13D82C7420AB005B2384 /* UIViewConstraints+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A13D72C7420AB005B2384 /* UIViewConstraints+Extensions.swift */; };
+		B21A13DB2C7420F1005B2384 /* CodeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A13DA2C7420F1005B2384 /* CodeViewProtocol.swift */; };
+		B21A13E12C7424B4005B2384 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A13E02C7424B4005B2384 /* Environment.swift */; };
+		B21A13E72C742561005B2384 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A13E62C742561005B2384 /* HTTPMethod.swift */; };
+		B21A13EB2C7425DE005B2384 /* DigioBaseServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A13EA2C7425DE005B2384 /* DigioBaseServiceProtocol.swift */; };
+		B21A13ED2C7425FA005B2384 /* DigioBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A13EC2C7425FA005B2384 /* DigioBaseService.swift */; };
+		B21A13EF2C7426CA005B2384 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A13EE2C7426CA005B2384 /* RequestProtocol.swift */; };
+		B21A13F32C7427BD005B2384 /* DigioNetworkBaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A13F22C7427BD005B2384 /* DigioNetworkBaseError.swift */; };
+		B21A13FB2C75666E005B2384 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A13FA2C75666E005B2384 /* MockURLSession.swift */; };
+		B21A13FD2C75681E005B2384 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A13FC2C75681E005B2384 /* MockURLSessionDataTask.swift */; };
+		B21A13FF2C756850005B2384 /* DigioBaseServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A13FE2C756850005B2384 /* DigioBaseServiceTests.swift */; };
+		B21A14012C756993005B2384 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14002C756993005B2384 /* MockRequest.swift */; };
+		B21A14042C756A2B005B2384 /* ModelMockCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14032C756A2B005B2384 /* ModelMockCodable.swift */; };
+		B21A14092C756C0D005B2384 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14082C756C0D005B2384 /* HomeViewController.swift */; };
 		B2C4C7D02C741ACE0001A9DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7CF2C741ACE0001A9DD /* AppDelegate.swift */; };
 		B2C4C7D22C741ACE0001A9DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7D12C741ACE0001A9DD /* SceneDelegate.swift */; };
-		B2C4C7D42C741ACE0001A9DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7D32C741ACE0001A9DD /* ViewController.swift */; };
 		B2C4C7D92C741ACF0001A9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C4C7D82C741ACF0001A9DD /* Assets.xcassets */; };
 		B2C4C7DC2C741ACF0001A9DD /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B2C4C7DB2C741ACF0001A9DD /* Base */; };
-		B2C4C7E72C741ACF0001A9DD /* DigioAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7E62C741ACF0001A9DD /* DigioAppTests.swift */; };
 		B2C4C7F12C741ACF0001A9DD /* DigioAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7F02C741ACF0001A9DD /* DigioAppUITests.swift */; };
 		B2C4C7F32C741ACF0001A9DD /* DigioAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7F22C741ACF0001A9DD /* DigioAppUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -35,15 +47,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B21A13D72C7420AB005B2384 /* UIViewConstraints+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewConstraints+Extensions.swift"; sourceTree = "<group>"; };
+		B21A13DA2C7420F1005B2384 /* CodeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewProtocol.swift; sourceTree = "<group>"; };
+		B21A13E02C7424B4005B2384 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		B21A13E62C742561005B2384 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		B21A13EA2C7425DE005B2384 /* DigioBaseServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioBaseServiceProtocol.swift; sourceTree = "<group>"; };
+		B21A13EC2C7425FA005B2384 /* DigioBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioBaseService.swift; sourceTree = "<group>"; };
+		B21A13EE2C7426CA005B2384 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		B21A13F22C7427BD005B2384 /* DigioNetworkBaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioNetworkBaseError.swift; sourceTree = "<group>"; };
+		B21A13FA2C75666E005B2384 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		B21A13FC2C75681E005B2384 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
+		B21A13FE2C756850005B2384 /* DigioBaseServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioBaseServiceTests.swift; sourceTree = "<group>"; };
+		B21A14002C756993005B2384 /* MockRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequest.swift; sourceTree = "<group>"; };
+		B21A14032C756A2B005B2384 /* ModelMockCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMockCodable.swift; sourceTree = "<group>"; };
+		B21A14082C756C0D005B2384 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B2C4C7CC2C741ACE0001A9DD /* DigioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C4C7CF2C741ACE0001A9DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2C4C7D12C741ACE0001A9DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B2C4C7D32C741ACE0001A9DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B2C4C7D82C741ACF0001A9DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2C4C7DB2C741ACF0001A9DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2C4C7DD2C741ACF0001A9DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2C4C7E22C741ACF0001A9DD /* DigioAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigioAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2C4C7E62C741ACF0001A9DD /* DigioAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioAppTests.swift; sourceTree = "<group>"; };
 		B2C4C7EC2C741ACF0001A9DD /* DigioAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigioAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C4C7F02C741ACF0001A9DD /* DigioAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioAppUITests.swift; sourceTree = "<group>"; };
 		B2C4C7F22C741ACF0001A9DD /* DigioAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -74,6 +98,119 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B21A13D02C741F5F005B2384 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				B21A13D92C7420E2005B2384 /* Utils */,
+				B21A13D62C742085005B2384 /* Extensions */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		B21A13D62C742085005B2384 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B21A13D72C7420AB005B2384 /* UIViewConstraints+Extensions.swift */,
+				B21A13DA2C7420F1005B2384 /* CodeViewProtocol.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B21A13D92C7420E2005B2384 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B21A13DC2C742229005B2384 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B21A13DD2C742240005B2384 /* Core */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B21A13DD2C742240005B2384 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B21A13F72C756482005B2384 /* Environment */,
+				B21A13F62C745795005B2384 /* Request */,
+				B21A13EA2C7425DE005B2384 /* DigioBaseServiceProtocol.swift */,
+				B21A13EC2C7425FA005B2384 /* DigioBaseService.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B21A13F62C745795005B2384 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				B21A13F22C7427BD005B2384 /* DigioNetworkBaseError.swift */,
+				B21A13E62C742561005B2384 /* HTTPMethod.swift */,
+				B21A13EE2C7426CA005B2384 /* RequestProtocol.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		B21A13F72C756482005B2384 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				B21A13E02C7424B4005B2384 /* Environment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		B21A13F82C756640005B2384 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B21A13F92C756648005B2384 /* Core */,
+				B21A13FE2C756850005B2384 /* DigioBaseServiceTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B21A13F92C756648005B2384 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B21A14022C756A11005B2384 /* Mock */,
+				B21A14032C756A2B005B2384 /* ModelMockCodable.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B21A14022C756A11005B2384 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				B21A13FA2C75666E005B2384 /* MockURLSession.swift */,
+				B21A13FC2C75681E005B2384 /* MockURLSessionDataTask.swift */,
+				B21A14002C756993005B2384 /* MockRequest.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		B21A14052C756BD7005B2384 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		B21A14062C756BF1005B2384 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B21A14072C756BFE005B2384 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B21A14072C756BFE005B2384 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B21A14082C756C0D005B2384 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		B2C4C7C32C741ACE0001A9DD = {
 			isa = PBXGroup;
 			children = (
@@ -97,9 +234,12 @@
 		B2C4C7CE2C741ACE0001A9DD /* DigioApp */ = {
 			isa = PBXGroup;
 			children = (
+				B21A13D02C741F5F005B2384 /* Commons */,
+				B21A14052C756BD7005B2384 /* New Group */,
+				B21A13DC2C742229005B2384 /* Network */,
+				B21A14062C756BF1005B2384 /* Modules */,
 				B2C4C7CF2C741ACE0001A9DD /* AppDelegate.swift */,
 				B2C4C7D12C741ACE0001A9DD /* SceneDelegate.swift */,
-				B2C4C7D32C741ACE0001A9DD /* ViewController.swift */,
 				B2C4C7D82C741ACF0001A9DD /* Assets.xcassets */,
 				B2C4C7DA2C741ACF0001A9DD /* LaunchScreen.storyboard */,
 				B2C4C7DD2C741ACF0001A9DD /* Info.plist */,
@@ -110,7 +250,7 @@
 		B2C4C7E52C741ACF0001A9DD /* DigioAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				B2C4C7E62C741ACF0001A9DD /* DigioAppTests.swift */,
+				B21A13F82C756640005B2384 /* Network */,
 			);
 			path = DigioAppTests;
 			sourceTree = "<group>";
@@ -254,9 +394,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2C4C7D42C741ACE0001A9DD /* ViewController.swift in Sources */,
+				B21A13F32C7427BD005B2384 /* DigioNetworkBaseError.swift in Sources */,
+				B21A13DB2C7420F1005B2384 /* CodeViewProtocol.swift in Sources */,
+				B21A13EB2C7425DE005B2384 /* DigioBaseServiceProtocol.swift in Sources */,
+				B21A13D82C7420AB005B2384 /* UIViewConstraints+Extensions.swift in Sources */,
+				B21A13E12C7424B4005B2384 /* Environment.swift in Sources */,
 				B2C4C7D02C741ACE0001A9DD /* AppDelegate.swift in Sources */,
 				B2C4C7D22C741ACE0001A9DD /* SceneDelegate.swift in Sources */,
+				B21A14092C756C0D005B2384 /* HomeViewController.swift in Sources */,
+				B21A13E72C742561005B2384 /* HTTPMethod.swift in Sources */,
+				B21A13EF2C7426CA005B2384 /* RequestProtocol.swift in Sources */,
+				B21A13ED2C7425FA005B2384 /* DigioBaseService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +412,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2C4C7E72C741ACF0001A9DD /* DigioAppTests.swift in Sources */,
+				B21A14042C756A2B005B2384 /* ModelMockCodable.swift in Sources */,
+				B21A13FD2C75681E005B2384 /* MockURLSessionDataTask.swift in Sources */,
+				B21A13FF2C756850005B2384 /* DigioBaseServiceTests.swift in Sources */,
+				B21A14012C756993005B2384 /* MockRequest.swift in Sources */,
+				B21A13FB2C75666E005B2384 /* MockURLSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
