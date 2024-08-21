@@ -17,7 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         
-        let navigationController = UINavigationController(rootViewController: HomeViewController())
+        let viewModel = HomeViewModel(service: HomeService(service: DigioBaseService()))
+        let navigationController = UINavigationController(rootViewController: HomeViewController(viewModel: viewModel, homeView: HomeView()))
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }

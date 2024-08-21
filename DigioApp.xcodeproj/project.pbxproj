@@ -21,6 +21,19 @@
 		B21A14012C756993005B2384 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14002C756993005B2384 /* MockRequest.swift */; };
 		B21A14042C756A2B005B2384 /* ModelMockCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14032C756A2B005B2384 /* ModelMockCodable.swift */; };
 		B21A14092C756C0D005B2384 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14082C756C0D005B2384 /* HomeViewController.swift */; };
+		B21A140D2C7575AE005B2384 /* SpotlightResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A140C2C7575AE005B2384 /* SpotlightResponse.swift */; };
+		B21A140F2C75766F005B2384 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A140E2C75766F005B2384 /* ProductResponse.swift */; };
+		B21A14112C757688005B2384 /* CashResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14102C757688005B2384 /* CashResponse.swift */; };
+		B21A14132C7576D6005B2384 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14122C7576D6005B2384 /* HomeResponse.swift */; };
+		B21A14152C75784C005B2384 /* SpotlightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14142C75784C005B2384 /* SpotlightModel.swift */; };
+		B21A14182C7578BE005B2384 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14172C7578BE005B2384 /* ProductModel.swift */; };
+		B21A141A2C7578DB005B2384 /* CashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14192C7578DB005B2384 /* CashModel.swift */; };
+		B21A141C2C75790B005B2384 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A141B2C75790B005B2384 /* HomeModel.swift */; };
+		B21A14202C757A23005B2384 /* HomeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A141F2C757A23005B2384 /* HomeRequest.swift */; };
+		B21A14232C757AA7005B2384 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14222C757AA7005B2384 /* HomeService.swift */; };
+		B21A14252C757DD7005B2384 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14242C757DD7005B2384 /* HomeViewModel.swift */; };
+		B21A14272C758398005B2384 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14262C758398005B2384 /* HomeView.swift */; };
+		B21A14292C758664005B2384 /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14282C758664005B2384 /* HomeCardView.swift */; };
 		B2C4C7D02C741ACE0001A9DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7CF2C741ACE0001A9DD /* AppDelegate.swift */; };
 		B2C4C7D22C741ACE0001A9DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7D12C741ACE0001A9DD /* SceneDelegate.swift */; };
 		B2C4C7D92C741ACF0001A9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C4C7D82C741ACF0001A9DD /* Assets.xcassets */; };
@@ -61,6 +74,19 @@
 		B21A14002C756993005B2384 /* MockRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequest.swift; sourceTree = "<group>"; };
 		B21A14032C756A2B005B2384 /* ModelMockCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMockCodable.swift; sourceTree = "<group>"; };
 		B21A14082C756C0D005B2384 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B21A140C2C7575AE005B2384 /* SpotlightResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightResponse.swift; sourceTree = "<group>"; };
+		B21A140E2C75766F005B2384 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
+		B21A14102C757688005B2384 /* CashResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashResponse.swift; sourceTree = "<group>"; };
+		B21A14122C7576D6005B2384 /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
+		B21A14142C75784C005B2384 /* SpotlightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightModel.swift; sourceTree = "<group>"; };
+		B21A14172C7578BE005B2384 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		B21A14192C7578DB005B2384 /* CashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashModel.swift; sourceTree = "<group>"; };
+		B21A141B2C75790B005B2384 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		B21A141F2C757A23005B2384 /* HomeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRequest.swift; sourceTree = "<group>"; };
+		B21A14222C757AA7005B2384 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		B21A14242C757DD7005B2384 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B21A14262C758398005B2384 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B21A14282C758664005B2384 /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
 		B2C4C7CC2C741ACE0001A9DD /* DigioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C4C7CF2C741ACE0001A9DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2C4C7D12C741ACE0001A9DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +152,9 @@
 		B21A13DC2C742229005B2384 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				B21A14212C757A99005B2384 /* Service */,
+				B21A141E2C7579F7005B2384 /* Request */,
+				B21A140B2C757596005B2384 /* Response */,
 				B21A13DD2C742240005B2384 /* Core */,
 			);
 			path = Network;
@@ -188,13 +217,6 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
-		B21A14052C756BD7005B2384 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		B21A14062C756BF1005B2384 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,9 +228,59 @@
 		B21A14072C756BFE005B2384 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B21A141D2C7579DD005B2384 /* View */,
+				B21A14162C7578AF005B2384 /* Model */,
 				B21A14082C756C0D005B2384 /* HomeViewController.swift */,
+				B21A14242C757DD7005B2384 /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		B21A140B2C757596005B2384 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				B21A140C2C7575AE005B2384 /* SpotlightResponse.swift */,
+				B21A140E2C75766F005B2384 /* ProductResponse.swift */,
+				B21A14102C757688005B2384 /* CashResponse.swift */,
+				B21A14122C7576D6005B2384 /* HomeResponse.swift */,
+			);
+			name = Response;
+			sourceTree = "<group>";
+		};
+		B21A14162C7578AF005B2384 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B21A14142C75784C005B2384 /* SpotlightModel.swift */,
+				B21A14172C7578BE005B2384 /* ProductModel.swift */,
+				B21A14192C7578DB005B2384 /* CashModel.swift */,
+				B21A141B2C75790B005B2384 /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B21A141D2C7579DD005B2384 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B21A14262C758398005B2384 /* HomeView.swift */,
+				B21A14282C758664005B2384 /* HomeCardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B21A141E2C7579F7005B2384 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				B21A141F2C757A23005B2384 /* HomeRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		B21A14212C757A99005B2384 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B21A14222C757AA7005B2384 /* HomeService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		B2C4C7C32C741ACE0001A9DD = {
@@ -235,7 +307,6 @@
 			isa = PBXGroup;
 			children = (
 				B21A13D02C741F5F005B2384 /* Commons */,
-				B21A14052C756BD7005B2384 /* New Group */,
 				B21A13DC2C742229005B2384 /* Network */,
 				B21A14062C756BF1005B2384 /* Modules */,
 				B2C4C7CF2C741ACE0001A9DD /* AppDelegate.swift */,
@@ -394,16 +465,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B21A14232C757AA7005B2384 /* HomeService.swift in Sources */,
+				B21A14252C757DD7005B2384 /* HomeViewModel.swift in Sources */,
 				B21A13F32C7427BD005B2384 /* DigioNetworkBaseError.swift in Sources */,
+				B21A14132C7576D6005B2384 /* HomeResponse.swift in Sources */,
 				B21A13DB2C7420F1005B2384 /* CodeViewProtocol.swift in Sources */,
 				B21A13EB2C7425DE005B2384 /* DigioBaseServiceProtocol.swift in Sources */,
+				B21A141C2C75790B005B2384 /* HomeModel.swift in Sources */,
+				B21A14112C757688005B2384 /* CashResponse.swift in Sources */,
+				B21A14202C757A23005B2384 /* HomeRequest.swift in Sources */,
+				B21A14182C7578BE005B2384 /* ProductModel.swift in Sources */,
+				B21A140D2C7575AE005B2384 /* SpotlightResponse.swift in Sources */,
+				B21A14292C758664005B2384 /* HomeCardView.swift in Sources */,
 				B21A13D82C7420AB005B2384 /* UIViewConstraints+Extensions.swift in Sources */,
 				B21A13E12C7424B4005B2384 /* Environment.swift in Sources */,
+				B21A14152C75784C005B2384 /* SpotlightModel.swift in Sources */,
+				B21A141A2C7578DB005B2384 /* CashModel.swift in Sources */,
 				B2C4C7D02C741ACE0001A9DD /* AppDelegate.swift in Sources */,
 				B2C4C7D22C741ACE0001A9DD /* SceneDelegate.swift in Sources */,
+				B21A140F2C75766F005B2384 /* ProductResponse.swift in Sources */,
 				B21A14092C756C0D005B2384 /* HomeViewController.swift in Sources */,
 				B21A13E72C742561005B2384 /* HTTPMethod.swift in Sources */,
 				B21A13EF2C7426CA005B2384 /* RequestProtocol.swift in Sources */,
+				B21A14272C758398005B2384 /* HomeView.swift in Sources */,
 				B21A13ED2C7425FA005B2384 /* DigioBaseService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
