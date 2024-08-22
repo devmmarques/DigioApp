@@ -32,12 +32,37 @@ class DigioBaseService: DigioBaseServiceProtocol {
             
             do {
                 let decodedModel = try JSONDecoder().decode(T.self, from: data)
-                completion(.success(decodedModel))
+                DispatchQueue.main.async {
+                    completion(.success(decodedModel))
+                }
+                
             } catch {
-                completion(.failure(DigioNetworkBaseError.parse))
+                DispatchQueue.main.async {
+                    completion(.failure(DigioNetworkBaseError.parse))
+                }
             }
         }
         task.resume()
     }
     
+    func fetchData(request: RequestProtocol, completion: @escaping (Result<Data, any Error>) -> Void) {
+        let urlRequest = request.asURLRequest()
+        
+        let task = session.dataTask(with: urlRequest) { data, response, error in
+            if error != nil {
+                completion(.failure(error ?? DigioNetworkBaseError.badRequest))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(DigioNetworkBaseError.noData))
+                return
+            }
+            
+            DispatchQueue.main.async {
+                completion(.success(data))
+            }
+        }
+        task.resume()
+    }
 }

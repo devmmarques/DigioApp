@@ -9,4 +9,5 @@ import Foundation
 
 protocol DigioBaseServiceProtocol {
     func fetch<T: Decodable>(request: RequestProtocol, model: T.Type, completion: @escaping (Result<T, DigioNetworkBaseError>) -> Void)
+    func fetchData(request: RequestProtocol, completion: @escaping (Result<Data, Error>) -> Void)
 }

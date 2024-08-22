@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol HomeViewControllerProtocol: AnyObject {
+    func update(produts: [ProductModel])
+}
+
 class HomeViewController: UIViewController {
     
     private let viewModel: HomeViewModelProtocol
@@ -16,6 +20,7 @@ class HomeViewController: UIViewController {
         self.viewModel = viewModel
         self.homeView = homeView
         super.init(nibName: nil, bundle: nil)
+        self.viewModel.delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -32,5 +37,11 @@ class HomeViewController: UIViewController {
     
     override func loadView() {
         view = homeView
+    }
+}
+
+extension HomeViewController: HomeViewControllerProtocol {
+    func update(produts: [ProductModel]) {
+        homeView.products = produts
     }
 }

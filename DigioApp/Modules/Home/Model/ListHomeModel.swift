@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HomeModel {
+struct ListHomeModel {
     let spotlight: [SpotlightModel]
     let products: [ProductModel]
     let cash: CashModel

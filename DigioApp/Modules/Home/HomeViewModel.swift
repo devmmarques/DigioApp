@@ -8,13 +8,15 @@
 import Foundation
 
 protocol HomeViewModelProtocol: AnyObject {
+    var delegate: HomeViewControllerProtocol? { get set }
     func fetchHome()
 }
 
 class HomeViewModel {
     
     var service: HomeServiceProtocol
-    var homeModel: HomeModel?
+    var homeModel: ListHomeModel?
+    weak var delegate: HomeViewControllerProtocol?
     
     init(service: HomeServiceProtocol) {
         self.service = service
@@ -28,7 +30,8 @@ extension HomeViewModel: HomeViewModelProtocol {
             guard let self = self else { return }
             switch result {
             case .success(let data):
-                print(data)
+                let homeModel = ListHomeModel(spotlight: data.spotlight, products: data.products, cash: data.cash)
+                delegate?.update(produts: homeModel.products)
             case .failure(let error):
                 print(error)
             }

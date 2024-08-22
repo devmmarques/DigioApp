@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HomeViewProtocol: UIView {
-    func updateView()
+    var products: [ProductModel] { get set }
 }
 
 final class HomeView: UIView, HomeViewProtocol {
@@ -37,12 +37,17 @@ final class HomeView: UIView, HomeViewProtocol {
         return stackView
     }()
     
-    private lazy var homeProdutos: HomeCardView = {
-        let view = HomeCardView()
+    private lazy var homeProduts: ProductCardCarrousselView = {
+        let view = ProductCardCarrousselView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
+    var products: [ProductModel] = [] {
+        didSet {
+            homeProduts.configure(model: products)
+        }
+    }
     
     init() {
         super.init(frame: .zero)
@@ -52,17 +57,13 @@ final class HomeView: UIView, HomeViewProtocol {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    func updateView() {
-        
-    }
 }
 
 extension HomeView: CodeViewProtocol {
     func buildViewHierarchy() {
         internalView.addSubview(internalStackView)
         scrollView.addSubview(internalView)
-        internalStackView.addArrangedSubview(homeProdutos)
+        internalStackView.addArrangedSubview(homeProduts)
         
         addSubview(scrollView)
     }
@@ -87,6 +88,4 @@ extension HomeView: CodeViewProtocol {
             .trailingAnchor(equalTo: internalView.trailingAnchor)
             .bottomAnchor(equalTo: internalView.bottomAnchor)
     }
-    
-    
 }
