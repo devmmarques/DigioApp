@@ -18,9 +18,9 @@ final class ProductCardCarrousselView: UIView {
     
     private lazy var title: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 18.0)
+        label.font = UIFont.boldSystemFont(ofSize: 20.0)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
+        label.textColor = .digioBlue
         label.text = "Produtos"
         return label
     }()
@@ -40,11 +40,11 @@ final class ProductCardCarrousselView: UIView {
     }()
     
     // MARK: Prorperties
-    private var model: [ProductModel]? {
+    private var model: [ProductModel]?{
         didSet {
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
-                self.collectionView.collectionViewLayout.invalidateLayout()
+                
             }
         }
     }
@@ -61,9 +61,8 @@ final class ProductCardCarrousselView: UIView {
     
     func configure(model: [ProductModel]) {
         self.model = model
+        self.collectionView.collectionViewLayout.invalidateLayout()
     }
-    
-    
 }
 
 
@@ -116,8 +115,8 @@ extension ProductCardCarrousselView: CodeViewProtocol {
             .leadingAnchor(equalTo: leadingAnchor, constant: 16.0)
         
         collectionView
-            .topAnchor(equalTo: title.bottomAnchor, constant: 8.0)
-            .leadingAnchor(equalTo: internalView.leadingAnchor)
+            .topAnchor(equalTo: title.bottomAnchor, constant: 16.0)
+            .leadingAnchor(equalTo: internalView.leadingAnchor, constant: 16.0)
             .trailingAnchor(equalTo: internalView.trailingAnchor)
             .bottomAnchor(equalTo: internalView.bottomAnchor)
             .heightAnchor(equalTo: 200.0)

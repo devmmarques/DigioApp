@@ -9,6 +9,7 @@ import UIKit
 
 protocol HomeViewControllerProtocol: AnyObject {
     func update(produts: [ProductModel])
+    func update(cash: CashModel)
 }
 
 class HomeViewController: UIViewController {
@@ -43,5 +44,9 @@ class HomeViewController: UIViewController {
 extension HomeViewController: HomeViewControllerProtocol {
     func update(produts: [ProductModel]) {
         homeView.products = produts
+    }
+    
+    func update(cash: CashModel) {
+        homeView.cashModel = cash
     }
 }

@@ -39,6 +39,15 @@
 		B21A14322C76BD28005B2384 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14312C76BD28005B2384 /* Identifier.swift */; };
 		B21A14342C76BD50005B2384 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14332C76BD50005B2384 /* UICollectionView+Extensions.swift */; };
 		B21A14362C76BF8B005B2384 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14352C76BF8B005B2384 /* UIImageView+Extensions.swift */; };
+		B21A14392C76D75D005B2384 /* DigioProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14382C76D75D005B2384 /* DigioProductView.swift */; };
+		B21A14402C7765C7005B2384 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B21A143B2C7765C6005B2384 /* Montserrat-Medium.ttf */; };
+		B21A14412C7765C7005B2384 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B21A143C2C7765C7005B2384 /* Montserrat-Bold.ttf */; };
+		B21A14422C7765C7005B2384 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B21A143D2C7765C7005B2384 /* Montserrat-Regular.ttf */; };
+		B21A14432C7765C7005B2384 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B21A143E2C7765C7005B2384 /* Montserrat-ExtraBold.ttf */; };
+		B21A14442C7765C7005B2384 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B21A143F2C7765C7005B2384 /* Montserrat-SemiBold.ttf */; };
+		B21A14462C77669C005B2384 /* DigioFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14452C77669C005B2384 /* DigioFont.swift */; };
+		B21A14482C776885005B2384 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14472C776885005B2384 /* UIColor+Extensions.swift */; };
+		B21A144A2C776A6F005B2384 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14492C776A6F005B2384 /* String+Extensions.swift */; };
 		B2C4C7D02C741ACE0001A9DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7CF2C741ACE0001A9DD /* AppDelegate.swift */; };
 		B2C4C7D22C741ACE0001A9DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7D12C741ACE0001A9DD /* SceneDelegate.swift */; };
 		B2C4C7D92C741ACF0001A9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C4C7D82C741ACF0001A9DD /* Assets.xcassets */; };
@@ -97,6 +106,15 @@
 		B21A14312C76BD28005B2384 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 		B21A14332C76BD50005B2384 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		B21A14352C76BF8B005B2384 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		B21A14382C76D75D005B2384 /* DigioProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioProductView.swift; sourceTree = "<group>"; };
+		B21A143B2C7765C6005B2384 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		B21A143C2C7765C7005B2384 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		B21A143D2C7765C7005B2384 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		B21A143E2C7765C7005B2384 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		B21A143F2C7765C7005B2384 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		B21A14452C77669C005B2384 /* DigioFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioFont.swift; sourceTree = "<group>"; };
+		B21A14472C776885005B2384 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		B21A14492C776A6F005B2384 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		B2C4C7CC2C741ACE0001A9DD /* DigioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C4C7CF2C741ACE0001A9DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2C4C7D12C741ACE0001A9DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +169,8 @@
 				B21A14312C76BD28005B2384 /* Identifier.swift */,
 				B21A14332C76BD50005B2384 /* UICollectionView+Extensions.swift */,
 				B21A14352C76BF8B005B2384 /* UIImageView+Extensions.swift */,
+				B21A14472C776885005B2384 /* UIColor+Extensions.swift */,
+				B21A14492C776A6F005B2384 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -158,6 +178,7 @@
 		B21A13D92C7420E2005B2384 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B21A14452C77669C005B2384 /* DigioFont.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -274,6 +295,7 @@
 		B21A141D2C7579DD005B2384 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B21A14372C76D746005B2384 /* Digio */,
 				B21A14302C76BC24005B2384 /* Product */,
 				B21A142F2C76A4D1005B2384 /* Custom */,
 			);
@@ -314,6 +336,26 @@
 			path = Product;
 			sourceTree = "<group>";
 		};
+		B21A14372C76D746005B2384 /* Digio */ = {
+			isa = PBXGroup;
+			children = (
+				B21A14382C76D75D005B2384 /* DigioProductView.swift */,
+			);
+			path = Digio;
+			sourceTree = "<group>";
+		};
+		B21A143A2C7765A3005B2384 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B21A143C2C7765C7005B2384 /* Montserrat-Bold.ttf */,
+				B21A143E2C7765C7005B2384 /* Montserrat-ExtraBold.ttf */,
+				B21A143B2C7765C6005B2384 /* Montserrat-Medium.ttf */,
+				B21A143D2C7765C7005B2384 /* Montserrat-Regular.ttf */,
+				B21A143F2C7765C7005B2384 /* Montserrat-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		B2C4C7C32C741ACE0001A9DD = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +379,7 @@
 		B2C4C7CE2C741ACE0001A9DD /* DigioApp */ = {
 			isa = PBXGroup;
 			children = (
+				B21A143A2C7765A3005B2384 /* Fonts */,
 				B21A13D02C741F5F005B2384 /* Commons */,
 				B21A13DC2C742229005B2384 /* Network */,
 				B21A14062C756BF1005B2384 /* Modules */,
@@ -470,7 +513,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B21A14412C7765C7005B2384 /* Montserrat-Bold.ttf in Resources */,
+				B21A14432C7765C7005B2384 /* Montserrat-ExtraBold.ttf in Resources */,
 				B2C4C7D92C741ACF0001A9DD /* Assets.xcassets in Resources */,
+				B21A14442C7765C7005B2384 /* Montserrat-SemiBold.ttf in Resources */,
+				B21A14402C7765C7005B2384 /* Montserrat-Medium.ttf in Resources */,
+				B21A14422C7765C7005B2384 /* Montserrat-Regular.ttf in Resources */,
 				B2C4C7DC2C741ACF0001A9DD /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,15 +545,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B21A14362C76BF8B005B2384 /* UIImageView+Extensions.swift in Sources */,
+				B21A144A2C776A6F005B2384 /* String+Extensions.swift in Sources */,
 				B21A14342C76BD50005B2384 /* UICollectionView+Extensions.swift in Sources */,
 				B21A14232C757AA7005B2384 /* HomeService.swift in Sources */,
 				B21A14252C757DD7005B2384 /* HomeViewModel.swift in Sources */,
 				B21A13F32C7427BD005B2384 /* DigioNetworkBaseError.swift in Sources */,
+				B21A14462C77669C005B2384 /* DigioFont.swift in Sources */,
 				B21A14132C7576D6005B2384 /* HomeResponse.swift in Sources */,
 				B21A13DB2C7420F1005B2384 /* CodeViewProtocol.swift in Sources */,
 				B21A13EB2C7425DE005B2384 /* DigioBaseServiceProtocol.swift in Sources */,
 				B21A142E2C76A4A9005B2384 /* ProductCardViewCell.swift in Sources */,
 				B21A141C2C75790B005B2384 /* ListHomeModel.swift in Sources */,
+				B21A14482C776885005B2384 /* UIColor+Extensions.swift in Sources */,
 				B21A14112C757688005B2384 /* CashResponse.swift in Sources */,
 				B21A14202C757A23005B2384 /* HomeRequest.swift in Sources */,
 				B21A14322C76BD28005B2384 /* Identifier.swift in Sources */,
@@ -523,6 +574,7 @@
 				B21A13E72C742561005B2384 /* HTTPMethod.swift in Sources */,
 				B21A13EF2C7426CA005B2384 /* RequestProtocol.swift in Sources */,
 				B21A14272C758398005B2384 /* HomeView.swift in Sources */,
+				B21A14392C76D75D005B2384 /* DigioProductView.swift in Sources */,
 				B21A13ED2C7425FA005B2384 /* DigioBaseService.swift in Sources */,
 				B21A142B2C76A1C5005B2384 /* ProductCardView.swift in Sources */,
 			);
