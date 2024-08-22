@@ -13,7 +13,6 @@ class DigioProductView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
-        view.layer.cornerRadius = 12
         return view
     }()
     
@@ -44,7 +43,7 @@ class DigioProductView: UIView {
     
     func configure(bannerURL: String?) {
         guard let url = bannerURL else { return }
-        bannerImage.load(url: url)
+        bannerImage.loading(url: url)
     }
     
     private func configureUI() {
@@ -66,8 +65,8 @@ extension DigioProductView: CodeViewProtocol {
     func setupConstraints() {
         internalView
             .topAnchor(equalTo: topAnchor)
-            .leadingAnchor(equalTo: leadingAnchor, constant: 16.0)
-            .trailingAnchor(equalTo: trailingAnchor, constant: -16.0)
+            .leadingAnchor(equalTo: leadingAnchor, constant: 16)
+            .trailingAnchor(equalTo: trailingAnchor, constant: -16)
             .bottomAnchor(equalTo: bottomAnchor)
             
         
@@ -83,4 +82,11 @@ extension DigioProductView: CodeViewProtocol {
             .bottomAnchor(equalTo: internalView.bottomAnchor)
             .heightAnchor(equalTo: 100)
     }
+    
+    func setupAdditionalConfiguration() {
+        bannerImage.layer.cornerRadius = 12.0
+        bannerImage.layer.masksToBounds = true
+        self.layoutSubviews()
+    }
+
 }

@@ -8,12 +8,14 @@
 import UIKit
 
 protocol HomeViewProtocol: UIView {
-    var products: [ProductModel] { get set }
-    var cashModel: CashModel? { get set }
+    var productsModel: [ProductModel] { get set }
+    var cashModelModel: CashModel? { get set }
+    var spotLightModel: [SpotlightModel] { get set }
 }
 
 final class HomeView: UIView, HomeViewProtocol {
     
+    // MARK: UI components
     private lazy var internalView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -25,6 +27,7 @@ final class HomeView: UIView, HomeViewProtocol {
         scroll.translatesAutoresizingMaskIntoConstraints = false
         scroll.isUserInteractionEnabled = true
         scroll.isScrollEnabled = true
+        scroll.showsVerticalScrollIndicator = true
         return scroll
     }()
     
@@ -34,6 +37,7 @@ final class HomeView: UIView, HomeViewProtocol {
         stackView.distribution = .fillProportionally
         stackView.alignment = .fill
         stackView.axis = .vertical
+        stackView.spacing = 8.0
         return stackView
     }()
     
@@ -49,15 +53,28 @@ final class HomeView: UIView, HomeViewProtocol {
         return view
     }()
     
-    var products: [ProductModel] = [] {
+    private lazy var spotLight: SpotlightCardCarrousselView = {
+        let view = SpotlightCardCarrousselView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    // MARK: Properties
+    var productsModel: [ProductModel] = [] {
         didSet {
-            homeProduts.configure(model: products)
+            homeProduts.configure(model: productsModel)
         }
     }
     
-    var cashModel: CashModel? = nil {
+    var cashModelModel: CashModel? = nil {
         didSet {
-            banner.configure(bannerURL: cashModel?.bannerUrl)
+            banner.configure(bannerURL: cashModelModel?.bannerUrl)
+        }
+    }
+    
+    var spotLightModel: [SpotlightModel] = [] {
+        didSet {
+            spotLight.configure(model: spotLightModel)
         }
     }
     
@@ -73,10 +90,12 @@ final class HomeView: UIView, HomeViewProtocol {
 
 extension HomeView: CodeViewProtocol {
     func buildViewHierarchy() {
-//        internalView.addSubview(internalStackView)
+        internalView.addSubview(internalStackView)
         scrollView.addSubview(internalView)
-        internalView.addSubview(banner)
-        internalView.addSubview(homeProduts)
+        
+        internalStackView.addArrangedSubview(spotLight)
+        internalStackView.addArrangedSubview(banner)
+        internalStackView.addArrangedSubview(homeProduts)
         
         addSubview(scrollView)
     }
@@ -95,20 +114,10 @@ extension HomeView: CodeViewProtocol {
             .trailingAnchor(equalTo: scrollView.trailingAnchor)
             .bottomAnchor(equalTo: scrollView.bottomAnchor)
         
-        banner
+        internalStackView
             .topAnchor(equalTo: internalView.topAnchor)
             .leadingAnchor(equalTo: internalView.leadingAnchor)
             .trailingAnchor(equalTo: internalView.trailingAnchor)
-        
-        homeProduts
-            .topAnchor(equalTo: banner.bottomAnchor, constant: 16.0)
-            .leadingAnchor(equalTo: internalView.leadingAnchor)
-            .trailingAnchor(equalTo: internalView.trailingAnchor)
-
-//        internalStackView
-//            .topAnchor(equalTo: internalView.topAnchor)
-//            .leadingAnchor(equalTo: internalView.leadingAnchor)
-//            .trailingAnchor(equalTo: internalView.trailingAnchor)
-//            .bottomAnchor(equalTo: internalView.bottomAnchor)
+            .bottomAnchor(equalTo: internalView.bottomAnchor)
     }
 }

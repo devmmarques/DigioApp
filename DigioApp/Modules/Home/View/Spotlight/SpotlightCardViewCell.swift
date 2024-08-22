@@ -1,23 +1,22 @@
 //
-//  HomeCardCarrousselViewCell.swift
+//  SpotlightCardViewCell.swift
 //  DigioApp
 //
-//  Created by Marco Marques on 21/08/24.
+//  Created by Marco Marques on 22/08/24.
 //
 
-import Foundation
 import UIKit
 
-final class ProductCardViewCell: UICollectionViewCell {
+class SpotlightCardViewCell: UICollectionViewCell {
     
-    private lazy var productCard: ProductCardView = {
-        let view = ProductCardView()
+    private lazy var spotlightView: SpotlightCardView = {
+        let view = SpotlightCardView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     // MARK: Properties
-    private var model: ProductModel?
+    private var model: SpotlightModel?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,18 +27,19 @@ final class ProductCardViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(model: ProductModel) {
+    func configure(model: SpotlightModel) {
         self.model = model
-        productCard.configure(urlImage: model.imageURL)
+        spotlightView.configure(urlImage: model.bannerUrl)
     }
 }
-extension ProductCardViewCell: CodeViewProtocol {
+
+extension SpotlightCardViewCell: CodeViewProtocol {
     func buildViewHierarchy() {
-        contentView.addSubview(productCard)
+        contentView.addSubview(spotlightView)
     }
     
     func setupConstraints() {
-        productCard
+        spotlightView
             .topAnchor(equalTo: contentView.topAnchor)
             .leadingAnchor(equalTo: contentView.leadingAnchor)
             .trailingAnchor(equalTo: contentView.trailingAnchor)
@@ -48,6 +48,10 @@ extension ProductCardViewCell: CodeViewProtocol {
     
     func setupAdditionalConfiguration() {
         contentView.backgroundColor = .clear
-        productCard.dropShadow(color: .lightGray, opacity: 0.8, offSet: CGSize(width: 0, height: 1), radius: 3, scale: true)
+        spotlightView.dropShadow(color: .lightGray, 
+                                 opacity: 0.8,
+                                 offSet: CGSize(width: -1, height: 0),
+                                 radius: 3,
+                                 scale: true)
     }
 }

@@ -1,15 +1,15 @@
 //
-//  ProductCardView.swift
+//  SpotlightCardView.swift
 //  DigioApp
 //
-//  Created by Marco Marques on 21/08/24.
+//  Created by Marco Marques on 22/08/24.
 //
+
 
 import Foundation
 import UIKit
 
-final class ProductCardView: UIView {
-    
+final class SpotlightCardView: UIView {
     
     private lazy var internalView: UIView = {
         let view = UIView()
@@ -18,10 +18,9 @@ final class ProductCardView: UIView {
         return view
     }()
     
-    private lazy var imageProduct: UIImageView = {
+    private lazy var imageSpotlight: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFit
         return image
     }()
     
@@ -35,15 +34,14 @@ final class ProductCardView: UIView {
     }
     
     func configure(urlImage: String) {
-        self.imageProduct.loading(url: urlImage)
+        self.imageSpotlight.loading(url: urlImage)
     }
-    
 }
 
-extension ProductCardView: CodeViewProtocol {
+extension SpotlightCardView: CodeViewProtocol {
     func buildViewHierarchy() {
         addSubview(internalView)
-        internalView.addSubview(imageProduct)
+        internalView.addSubview(imageSpotlight)
     }
     
     func setupConstraints() {
@@ -53,16 +51,16 @@ extension ProductCardView: CodeViewProtocol {
             .trailingAnchor(equalTo: trailingAnchor)
             .bottomAnchor(equalTo: bottomAnchor)
         
-        imageProduct
-            .topAnchor(equalTo: internalView.topAnchor, constant: 24)
-            .leadingAnchor(equalTo: internalView.leadingAnchor, constant: 24)
-            .trailingAnchor(equalTo: internalView.trailingAnchor,constant: -24)
-            .bottomAnchor(equalTo: internalView.bottomAnchor, constant: -24)
+        imageSpotlight
+            .topAnchor(equalTo: internalView.topAnchor)
+            .leadingAnchor(equalTo: internalView.leadingAnchor)
+            .trailingAnchor(equalTo: internalView.trailingAnchor)
+            .bottomAnchor(equalTo: internalView.bottomAnchor)
     }
     
     func setupAdditionalConfiguration() {
-        internalView.layer.cornerRadius = 16.0
+        internalView.layer.cornerRadius = 12.0
         internalView.layer.masksToBounds = true
-        self.layoutSubviews()
+        internalView.layoutIfNeeded()
     }
 }

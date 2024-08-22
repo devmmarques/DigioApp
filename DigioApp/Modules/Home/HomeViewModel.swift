@@ -31,8 +31,7 @@ extension HomeViewModel: HomeViewModelProtocol {
             switch result {
             case .success(let data):
                 let homeModel = ListHomeModel(spotlight: data.spotlight, products: data.products, cash: data.cash)
-                delegate?.update(produts: homeModel.products)
-                delegate?.update(cash: homeModel.cash)
+                delegate?.update(model: homeModel)
             case .failure(let error):
                 print(error)
             }

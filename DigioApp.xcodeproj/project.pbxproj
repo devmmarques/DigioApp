@@ -48,6 +48,10 @@
 		B21A14462C77669C005B2384 /* DigioFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14452C77669C005B2384 /* DigioFont.swift */; };
 		B21A14482C776885005B2384 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14472C776885005B2384 /* UIColor+Extensions.swift */; };
 		B21A144A2C776A6F005B2384 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14492C776A6F005B2384 /* String+Extensions.swift */; };
+		B21A144D2C7785D4005B2384 /* SpotlightCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A144C2C7785D4005B2384 /* SpotlightCardView.swift */; };
+		B21A144F2C778629005B2384 /* SpotlightCardCarrousselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A144E2C778629005B2384 /* SpotlightCardCarrousselView.swift */; };
+		B21A14512C778729005B2384 /* SpotlightCardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14502C778729005B2384 /* SpotlightCardViewCell.swift */; };
+		B21A14532C77A5B3005B2384 /* UIView+Estensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14522C77A5B3005B2384 /* UIView+Estensions.swift */; };
 		B2C4C7D02C741ACE0001A9DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7CF2C741ACE0001A9DD /* AppDelegate.swift */; };
 		B2C4C7D22C741ACE0001A9DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7D12C741ACE0001A9DD /* SceneDelegate.swift */; };
 		B2C4C7D92C741ACF0001A9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C4C7D82C741ACF0001A9DD /* Assets.xcassets */; };
@@ -115,6 +119,10 @@
 		B21A14452C77669C005B2384 /* DigioFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioFont.swift; sourceTree = "<group>"; };
 		B21A14472C776885005B2384 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		B21A14492C776A6F005B2384 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		B21A144C2C7785D4005B2384 /* SpotlightCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightCardView.swift; sourceTree = "<group>"; };
+		B21A144E2C778629005B2384 /* SpotlightCardCarrousselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightCardCarrousselView.swift; sourceTree = "<group>"; };
+		B21A14502C778729005B2384 /* SpotlightCardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightCardViewCell.swift; sourceTree = "<group>"; };
+		B21A14522C77A5B3005B2384 /* UIView+Estensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Estensions.swift"; sourceTree = "<group>"; };
 		B2C4C7CC2C741ACE0001A9DD /* DigioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C4C7CF2C741ACE0001A9DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2C4C7D12C741ACE0001A9DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +179,7 @@
 				B21A14352C76BF8B005B2384 /* UIImageView+Extensions.swift */,
 				B21A14472C776885005B2384 /* UIColor+Extensions.swift */,
 				B21A14492C776A6F005B2384 /* String+Extensions.swift */,
+				B21A14522C77A5B3005B2384 /* UIView+Estensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -295,6 +304,7 @@
 		B21A141D2C7579DD005B2384 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B21A144B2C7785A4005B2384 /* Spotlight */,
 				B21A14372C76D746005B2384 /* Digio */,
 				B21A14302C76BC24005B2384 /* Product */,
 				B21A142F2C76A4D1005B2384 /* Custom */,
@@ -354,6 +364,16 @@
 				B21A143F2C7765C7005B2384 /* Montserrat-SemiBold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B21A144B2C7785A4005B2384 /* Spotlight */ = {
+			isa = PBXGroup;
+			children = (
+				B21A144C2C7785D4005B2384 /* SpotlightCardView.swift */,
+				B21A144E2C778629005B2384 /* SpotlightCardCarrousselView.swift */,
+				B21A14502C778729005B2384 /* SpotlightCardViewCell.swift */,
+			);
+			path = Spotlight;
 			sourceTree = "<group>";
 		};
 		B2C4C7C32C741ACE0001A9DD = {
@@ -554,19 +574,23 @@
 				B21A14132C7576D6005B2384 /* HomeResponse.swift in Sources */,
 				B21A13DB2C7420F1005B2384 /* CodeViewProtocol.swift in Sources */,
 				B21A13EB2C7425DE005B2384 /* DigioBaseServiceProtocol.swift in Sources */,
+				B21A144F2C778629005B2384 /* SpotlightCardCarrousselView.swift in Sources */,
 				B21A142E2C76A4A9005B2384 /* ProductCardViewCell.swift in Sources */,
 				B21A141C2C75790B005B2384 /* ListHomeModel.swift in Sources */,
 				B21A14482C776885005B2384 /* UIColor+Extensions.swift in Sources */,
 				B21A14112C757688005B2384 /* CashResponse.swift in Sources */,
 				B21A14202C757A23005B2384 /* HomeRequest.swift in Sources */,
+				B21A144D2C7785D4005B2384 /* SpotlightCardView.swift in Sources */,
 				B21A14322C76BD28005B2384 /* Identifier.swift in Sources */,
 				B21A14182C7578BE005B2384 /* ProductModel.swift in Sources */,
+				B21A14532C77A5B3005B2384 /* UIView+Estensions.swift in Sources */,
 				B21A140D2C7575AE005B2384 /* SpotlightResponse.swift in Sources */,
 				B21A14292C758664005B2384 /* ProductCardCarrousselView.swift in Sources */,
 				B21A13D82C7420AB005B2384 /* UIViewConstraints+Extensions.swift in Sources */,
 				B21A13E12C7424B4005B2384 /* Environment.swift in Sources */,
 				B21A14152C75784C005B2384 /* SpotlightModel.swift in Sources */,
 				B21A141A2C7578DB005B2384 /* CashModel.swift in Sources */,
+				B21A14512C778729005B2384 /* SpotlightCardViewCell.swift in Sources */,
 				B2C4C7D02C741ACE0001A9DD /* AppDelegate.swift in Sources */,
 				B2C4C7D22C741ACE0001A9DD /* SceneDelegate.swift in Sources */,
 				B21A140F2C75766F005B2384 /* ProductResponse.swift in Sources */,
