@@ -15,7 +15,7 @@ protocol HomeViewProtocol: UIView {
 }
 
 protocol HomeViewDelegate: AnyObject {
-    func didTapOpenDetailProduct(model: ProductModel)
+    func didOpenDetail(model: HomeDetailModel)
 }
 
 final class HomeView: UIView, HomeViewProtocol {
@@ -51,7 +51,10 @@ final class HomeView: UIView, HomeViewProtocol {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.didTapAction = { [weak self] model in
             guard let self = self else { return }
-            self.delegate?.didTapOpenDetailProduct(model: model)
+            self.delegate?.didOpenDetail(model: .init(title: model.name,
+                                                      imageURL: model.imageURL,
+                                                      description: model.description,
+                                                      isFull: false))
         }
         return view
     }()
@@ -59,6 +62,13 @@ final class HomeView: UIView, HomeViewProtocol {
     private lazy var banner: DigioProductView = {
         let view = DigioProductView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.didTapAction = { [weak self] model in
+            guard let self = self else { return }
+            self.delegate?.didOpenDetail(model: .init(title: model.title,
+                                                      imageURL: model.bannerUrl,
+                                                      description: model.description,
+                                                      isFull: true))
+        }
         return view
     }()
     
@@ -78,7 +88,7 @@ final class HomeView: UIView, HomeViewProtocol {
     
     var cashModelModel: CashModel? = nil {
         didSet {
-            banner.configure(bannerURL: cashModelModel?.bannerUrl)
+            banner.configure(model: cashModelModel)
         }
     }
     

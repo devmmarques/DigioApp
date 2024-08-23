@@ -11,4 +11,5 @@ struct HomeDetailModel {
     let title: String
     let imageURL: String
     let description: String
+    let isFull: Bool
 }

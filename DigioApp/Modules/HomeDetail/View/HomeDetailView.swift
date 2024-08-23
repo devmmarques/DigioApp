@@ -56,10 +56,10 @@ class HomeDetailView: UIView, HomeDetailViewProtocol {
         return label
     }()
     
-    private lazy var logoimage: UIImageView = {
+    private lazy var logoImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFit
+        image.contentMode = .redraw
         return image
     }()
     
@@ -73,6 +73,13 @@ class HomeDetailView: UIView, HomeDetailViewProtocol {
         return label
     }()
     
+    
+    private lazy var footerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        return view
+    }()
     private lazy var buttonContinue: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -81,7 +88,6 @@ class HomeDetailView: UIView, HomeDetailViewProtocol {
         button.setTitle("CONTINUE", for: .normal)
         return button
     }()
-    
     
     weak var delegate: HomeDetailViewControllerProtocol?
     
@@ -96,8 +102,16 @@ class HomeDetailView: UIView, HomeDetailViewProtocol {
     
     func configure(model: HomeDetailModel) {
         self.titleLabel.text = model.title
-        self.logoimage.loading(url: model.imageURL)
+        self.logoImage.loading(url: model.imageURL)
         self.descriptionLabel.text = model.description
+        
+        if !model.isFull {
+            logoImage.heightAnchor(equalTo: 56).widthAnchor(equalTo: 56)
+            self.layoutSubviews()
+        } else {
+            logoImage.heightAnchor(equalTo: 100)
+            self.layoutSubviews()
+        }
     }
 }
 extension HomeDetailView {
@@ -116,12 +130,14 @@ extension HomeDetailView: CodeViewProtocol {
     func buildViewHierarchy() {
         internalView.addSubview(buttonClosed)
         internalView.addSubview(internalStackView)
-        internalView.addSubview(buttonContinue)
         scrollView.addSubview(internalView)
-        addSubview(scrollView)
         
-        internalStackView.addArrangedSubview(logoimage)
+        footerView.addSubview(buttonContinue)
+        addSubview(scrollView)
+        addSubview(footerView)
+        
         internalStackView.addArrangedSubview(titleLabel)
+        internalStackView.addArrangedSubview(logoImage)
         internalStackView.addArrangedSubview(descriptionLabel)
     }
     
@@ -142,27 +158,36 @@ extension HomeDetailView: CodeViewProtocol {
         buttonClosed
             .topAnchor(equalTo: internalView.topAnchor, constant: 16)
             .trailingAnchor(equalTo: internalView.trailingAnchor, constant: -16)
-            .heightAnchor(equalTo: 24)
-            .widthAnchor(equalTo: 24)
+            .heightAnchor(equalTo: 18)
+            .widthAnchor(equalTo: 18)
         
         internalStackView
             .topAnchor(equalTo: buttonClosed.bottomAnchor, constant: 16)
             .leadingAnchor(equalTo: internalView.leadingAnchor, constant: 16)
             .trailingAnchor(equalTo: internalView.trailingAnchor, constant: -16)
-            .bottomAnchor(equalTo: buttonContinue.topAnchor, constant: -16)
-            
-        
-        buttonContinue
-            .leadingAnchor(equalTo: internalView.leadingAnchor, constant: 16)
-            .trailingAnchor(equalTo: internalView.trailingAnchor, constant: -16)
             .bottomAnchor(equalTo: internalView.bottomAnchor, constant: -16)
-            .heightAnchor(equalTo: 56)
+            
+        buttonContinue
+            .topAnchor(equalTo: footerView.topAnchor, constant: 12.0)
+            .leadingAnchor(equalTo: footerView.leadingAnchor, constant: 12.0)
+            .trailingAnchor(equalTo: footerView.trailingAnchor, constant: -12.0)
+            .bottomAnchor(equalTo: footerView.bottomAnchor, constant: -12.0)
+            .heightAnchor(equalTo: 52.0)
         
-        logoimage.heightAnchor(equalTo: 56).widthAnchor(equalTo: 56)
+        
+        footerView
+            .leadingAnchor(equalTo: leadingAnchor)
+            .trailingAnchor(equalTo: trailingAnchor)
+            .bottomAnchor(equalTo: bottomAnchor)
+            
     }
     
     func setupAdditionalConfiguration() {
         internalView.backgroundColor = .white
         backgroundColor = .clear
+        
+        logoImage.layer.cornerRadius = 12.0
+        logoImage.layer.masksToBounds = true
+        logoImage.layoutIfNeeded()
     }
 }

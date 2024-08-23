@@ -53,7 +53,7 @@ extension HomeViewController: HomeViewControllerProtocol {
 }
 
 extension HomeViewController: HomeViewDelegate {
-    func didTapOpenDetailProduct(model: ProductModel) {
-        coordinator?.openDetailView(model: .init(title: model.name, imageURL: model.imageURL, description: model.description))
+    func didOpenDetail(model: HomeDetailModel) {
+        coordinator?.openDetailView(model: model)
     }
 }

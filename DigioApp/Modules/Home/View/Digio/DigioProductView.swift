@@ -27,9 +27,12 @@ class DigioProductView: UIView {
     private lazy var bannerImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .redraw
+        image.isUserInteractionEnabled = true
         return image
     }()
+    
+    var didTapAction: ((CashModel) -> Void)?
+    var model: CashModel?
     
     init() {
         super.init(frame: .zero)
@@ -41,9 +44,10 @@ class DigioProductView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(bannerURL: String?) {
-        guard let url = bannerURL else { return }
-        bannerImage.loading(url: url)
+    func configure(model: CashModel?) {
+        guard let cashModel = model else { return }
+        self.model = cashModel
+        bannerImage.loading(url: cashModel.bannerUrl)
     }
     
     private func configureUI() {
@@ -52,6 +56,17 @@ class DigioProductView: UIView {
         titleLabel.attributedText = coloredText
         
         backgroundColor = .clear
+        
+        let gesture = UITapGestureRecognizer()
+        gesture.addTarget(self, action: #selector(didTap))
+        
+        bannerImage.addGestureRecognizer(gesture)
+    }
+    
+    @objc func didTap() {
+        if let cashModel = self.model {
+            didTapAction?(cashModel)
+        }
     }
 }
 
