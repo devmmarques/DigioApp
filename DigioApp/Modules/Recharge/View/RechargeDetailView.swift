@@ -104,10 +104,6 @@ class RechargeDetailView: UIView, RechargeDetailViewProtocol {
 }
 extension RechargeDetailView {
     
-    @objc func didTapClosed() {
-        delegate?.didTapClosed()
-    }
-    
     @objc func didContinue() {
         delegate?.didTapContinue()
     }

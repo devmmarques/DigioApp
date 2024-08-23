@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol RechargeDetailCoordinatorProtocol: AnyObject {
+    func openDetail(model: RechargeDetailModel)
+    func closedView()
+    func showAlert(alert: AlertViewModel)
+}
+
 final class RechargeDetailCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     let navigationController: UINavigationController
@@ -19,10 +25,14 @@ final class RechargeDetailCoordinator: Coordinator {
     func start() {
         
     }
+}
+
+extension RechargeDetailCoordinator: RechargeDetailCoordinatorProtocol {
     
     func openDetail(model: RechargeDetailModel) {
-        let viewModel = RechargeDetailViewModel(model: model)
-        let rechargeDetailViewController = RechargeDetailViewController(coordinator: self, viewModel: viewModel, rechargeView: RechargeDetailView())
+        let viewModel = RechargeDetailViewModel(model: model, coordinator: self)
+        let rechargeDetailViewController = RechargeDetailViewController(viewModel: viewModel,
+                                                                        rechargeView: RechargeDetailView())
         navigationController.pushViewController(rechargeDetailViewController, animated: true)
     }
     

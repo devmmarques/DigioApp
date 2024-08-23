@@ -8,20 +8,15 @@
 import UIKit
 
 protocol RechargeDetailViewControllerProtocol: AnyObject {
-    func didTapClosed()
     func didTapContinue()
 }
 
 final class RechargeDetailViewController: BaseViewController {
     
-    private var coordinator: RechargeDetailCoordinator?
     private let rechargeDetailView: RechargeDetailViewProtocol
     private var viewModel: RechargeDetailViewModelProtocol
     
-    init(coordinator: RechargeDetailCoordinator,
-         viewModel: RechargeDetailViewModelProtocol, 
-         rechargeView: RechargeDetailViewProtocol) {
-        self.coordinator = coordinator
+    init(viewModel: RechargeDetailViewModelProtocol, rechargeView: RechargeDetailViewProtocol) {
         self.rechargeDetailView = rechargeView
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -49,21 +44,8 @@ final class RechargeDetailViewController: BaseViewController {
 }
 
 extension RechargeDetailViewController: RechargeDetailViewControllerProtocol {
-    func didTapClosed() {
-        coordinator?.closedView()
-    }
-    
     func didTapContinue() {
-        let product = viewModel.getDetail()
-        coordinator?.showAlert(alert: .init(status: .success,
-                                            title: "Recarga \(product.title) realizada com sucesso",
-                                            description: "Parábens ! Você acaba de adicionar um saldo \(product.title) \n\n Aproveite ao máximo e continue usufluindo dos nossos serviços.",
-                                            titlePrimaryButton: "OK",
-                                            titleSecondaryButton: nil,
-                                            actionPrimaryButton: { [weak self] in
-            self?.coordinator?.closedView()
-        },
-                                            actionSecondaryButton: nil))
+        viewModel.didTapContinue()
     }
 }
 

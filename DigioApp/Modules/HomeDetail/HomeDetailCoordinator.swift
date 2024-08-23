@@ -26,9 +26,8 @@ class HomeDetailCoordinator: Coordinator {
 extension HomeDetailCoordinator: HomeDetailCoordinatorProtocol {
     
     func openDetail(model: HomeDetailModel) {
-        let viewModel = HomeDetailViewModel(model: model)
-        let homeDetailViewController = HomeDetailViewController(coordinator: self,
-                                                                viewModel: viewModel,
+        let viewModel = HomeDetailViewModel(model: model, coordinator: self)
+        let homeDetailViewController = HomeDetailViewController(viewModel: viewModel,
                                                                 homeView: HomeDetailView())
         navigationController.present(homeDetailViewController, animated: true)
     }

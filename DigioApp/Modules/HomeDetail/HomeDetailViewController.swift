@@ -13,14 +13,10 @@ protocol HomeDetailViewControllerProtocol: AnyObject {
 
 final class HomeDetailViewController: UIViewController {
     
-    weak var coordinator: HomeDetailCoordinator?
     private let homeDetailView: HomeDetailViewProtocol
     private var viewModel: HomeDetailViewModelProtocol
     
-    init(coordinator: HomeDetailCoordinator,
-         viewModel: HomeDetailViewModelProtocol,
-         homeView: HomeDetailViewProtocol) {
-        self.coordinator = coordinator
+    init(viewModel: HomeDetailViewModelProtocol, homeView: HomeDetailViewProtocol) {
         self.homeDetailView = homeView
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -48,7 +44,7 @@ final class HomeDetailViewController: UIViewController {
 
 extension HomeDetailViewController: HomeDetailViewControllerProtocol {
     func didTapClosed() {
-        coordinator?.closedView()
+        viewModel.closedView()
     }
 }
 
