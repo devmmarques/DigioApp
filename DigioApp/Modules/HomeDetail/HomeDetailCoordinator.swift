@@ -7,7 +7,12 @@
 
 import UIKit
 
-final class HomeDetailCoordinator: Coordinator {
+protocol HomeDetailCoordinatorProtocol: AnyObject {
+    func openDetail(model: HomeDetailModel)
+    func closedView()
+}
+
+class HomeDetailCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     let navigationController: UINavigationController
     
@@ -15,13 +20,16 @@ final class HomeDetailCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     
-    func start() {
-        
-    }
+    func start() { }
+}
+
+extension HomeDetailCoordinator: HomeDetailCoordinatorProtocol {
     
     func openDetail(model: HomeDetailModel) {
         let viewModel = HomeDetailViewModel(model: model)
-        let homeDetailViewController = HomeDetailViewController(viewModel: viewModel, homeView: HomeDetailView())
+        let homeDetailViewController = HomeDetailViewController(coordinator: self,
+                                                                viewModel: viewModel,
+                                                                homeView: HomeDetailView())
         navigationController.present(homeDetailViewController, animated: true)
     }
     

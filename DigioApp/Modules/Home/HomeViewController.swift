@@ -9,13 +9,14 @@ import UIKit
 
 protocol HomeViewControllerProtocol: AnyObject {
     func update(model: ListHomeModel)
+    func showError()
 }
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     
     private var viewModel: HomeViewModelProtocol
     private let homeView: HomeViewProtocol
-    private var coordinator: HomeCoordinatorProtocol?
+    var coordinator: HomeCoordinatorProtocol?
     
     init(viewModel: HomeViewModelProtocol,
          homeView: HomeViewProtocol,
@@ -49,6 +50,20 @@ extension HomeViewController: HomeViewControllerProtocol {
         homeView.productsModel = model.products
         homeView.cashModelModel = model.cash
         homeView.spotLightModel = model.spotlight
+    }
+    
+    func showError() {
+        coordinator?.showAlert(alert: .init(status: .error,
+                                            title: "Erro ao carregar",
+                                            description: "Não foi possível carregar os dados \n Deseja tentar novamente ?",
+                                            titlePrimaryButton: "Sim",
+                                            titleSecondaryButton: "Não",
+                                            actionPrimaryButton: { [weak self] in
+            self?.viewModel.fetchHome()
+        },
+                                            actionSecondaryButton: { [weak self] in
+            self?.dismiss(animated: true)
+        }))
     }
 }
 

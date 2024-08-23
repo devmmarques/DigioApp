@@ -84,7 +84,7 @@ class HomeDetailView: UIView, HomeDetailViewProtocol {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(didContinue), for: .touchUpInside)
-        button.applyButtonGreen()
+        button.applyPrimaryButton()
         button.setTitle("CONTINUE", for: .normal)
         return button
     }()
@@ -121,7 +121,7 @@ extension HomeDetailView {
     }
     
     @objc func didContinue() {
-        
+        delegate?.didTapClosed()
     }
 }
 

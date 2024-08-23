@@ -33,7 +33,7 @@ extension HomeViewModel: HomeViewModelProtocol {
                 let homeModel = ListHomeModel(spotlight: data.spotlight, products: data.products, cash: data.cash)
                 delegate?.update(model: homeModel)
             case .failure(let error):
-                print(error)
+                delegate?.showError()
             }
         }
     }

@@ -22,12 +22,18 @@ final class RechargeDetailCoordinator: Coordinator {
     
     func openDetail(model: RechargeDetailModel) {
         let viewModel = RechargeDetailViewModel(model: model)
-        let RechargeDetailViewController = RechargeDetailViewController(viewModel: viewModel, rechargeView: RechargeDetailView())
-        navigationController.present(RechargeDetailViewController, animated: true)
+        let rechargeDetailViewController = RechargeDetailViewController(coordinator: self, viewModel: viewModel, rechargeView: RechargeDetailView())
+        navigationController.pushViewController(rechargeDetailViewController, animated: true)
     }
     
     
     func closedView() {
         navigationController.dismiss(animated: true)
+    }
+    
+    func showAlert(alert: AlertViewModel) {
+        
+        let alert = DigioAlertViewController(alert: alert)
+        self.navigationController.present(alert, animated: true)
     }
 }

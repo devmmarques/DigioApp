@@ -17,11 +17,13 @@ final class HomeDetailViewController: UIViewController {
     private let homeDetailView: HomeDetailViewProtocol
     private var viewModel: HomeDetailViewModelProtocol
     
-    init(viewModel: HomeDetailViewModelProtocol, homeView: HomeDetailViewProtocol) {
+    init(coordinator: HomeDetailCoordinator,
+         viewModel: HomeDetailViewModelProtocol,
+         homeView: HomeDetailViewProtocol) {
+        self.coordinator = coordinator
         self.homeDetailView = homeView
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        configureDelegate()
     }
     
     required init?(coder: NSCoder) {
@@ -31,6 +33,7 @@ final class HomeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        configureDelegate()
         homeDetailView.configure(model: viewModel.getDetail())
     }
     override func loadView() {

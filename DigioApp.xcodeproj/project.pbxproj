@@ -66,6 +66,10 @@
 		B21A14712C784CD3005B2384 /* RechardDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14702C784CD3005B2384 /* RechardDetailCoordinator.swift */; };
 		B21A14742C784CF8005B2384 /* RechargeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14732C784CF8005B2384 /* RechargeDetailModel.swift */; };
 		B21A14772C784D25005B2384 /* RechargeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14762C784D25005B2384 /* RechargeDetailView.swift */; };
+		B21A147A2C78D1CE005B2384 /* DigioAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14792C78D1CD005B2384 /* DigioAlertViewController.swift */; };
+		B21A147D2C78D24E005B2384 /* DigioAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A147C2C78D24E005B2384 /* DigioAlertView.swift */; };
+		B21A147F2C7908D4005B2384 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A147E2C7908D4005B2384 /* BaseViewController.swift */; };
+		B21A14812C790D3E005B2384 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14802C790D3E005B2384 /* AlertViewModel.swift */; };
 		B2C4C7D02C741ACE0001A9DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7CF2C741ACE0001A9DD /* AppDelegate.swift */; };
 		B2C4C7D22C741ACE0001A9DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7D12C741ACE0001A9DD /* SceneDelegate.swift */; };
 		B2C4C7D92C741ACF0001A9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C4C7D82C741ACF0001A9DD /* Assets.xcassets */; };
@@ -151,6 +155,10 @@
 		B21A14702C784CD3005B2384 /* RechardDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechardDetailCoordinator.swift; sourceTree = "<group>"; };
 		B21A14732C784CF8005B2384 /* RechargeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargeDetailModel.swift; sourceTree = "<group>"; };
 		B21A14762C784D25005B2384 /* RechargeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargeDetailView.swift; sourceTree = "<group>"; };
+		B21A14792C78D1CD005B2384 /* DigioAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioAlertViewController.swift; sourceTree = "<group>"; };
+		B21A147C2C78D24E005B2384 /* DigioAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioAlertView.swift; sourceTree = "<group>"; };
+		B21A147E2C7908D4005B2384 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B21A14802C790D3E005B2384 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
 		B2C4C7CC2C741ACE0001A9DD /* DigioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C4C7CF2C741ACE0001A9DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2C4C7D12C741ACE0001A9DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +199,7 @@
 		B21A13D02C741F5F005B2384 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				B21A14782C78D1B6005B2384 /* View */,
 				B21A14542C77D00F005B2384 /* Coordinator */,
 				B21A13D92C7420E2005B2384 /* Utils */,
 				B21A13D62C742085005B2384 /* Extensions */,
@@ -474,6 +483,25 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B21A14782C78D1B6005B2384 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B21A147B2C78D23F005B2384 /* Alert */,
+				B21A147E2C7908D4005B2384 /* BaseViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B21A147B2C78D23F005B2384 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				B21A14792C78D1CD005B2384 /* DigioAlertViewController.swift */,
+				B21A147C2C78D24E005B2384 /* DigioAlertView.swift */,
+				B21A14802C790D3E005B2384 /* AlertViewModel.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		B2C4C7C32C741ACE0001A9DD = {
 			isa = PBXGroup;
 			children = (
@@ -667,6 +695,7 @@
 				B21A144A2C776A6F005B2384 /* String+Extensions.swift in Sources */,
 				B21A14342C76BD50005B2384 /* UICollectionView+Extensions.swift in Sources */,
 				B21A14232C757AA7005B2384 /* HomeService.swift in Sources */,
+				B21A147F2C7908D4005B2384 /* BaseViewController.swift in Sources */,
 				B21A14772C784D25005B2384 /* RechargeDetailView.swift in Sources */,
 				B21A14252C757DD7005B2384 /* HomeViewModel.swift in Sources */,
 				B21A13F32C7427BD005B2384 /* DigioNetworkBaseError.swift in Sources */,
@@ -689,14 +718,17 @@
 				B21A14322C76BD28005B2384 /* Identifier.swift in Sources */,
 				B21A14182C7578BE005B2384 /* ProductModel.swift in Sources */,
 				B21A14532C77A5B3005B2384 /* UIView+Estensions.swift in Sources */,
+				B21A147D2C78D24E005B2384 /* DigioAlertView.swift in Sources */,
 				B21A140D2C7575AE005B2384 /* SpotlightResponse.swift in Sources */,
 				B21A14292C758664005B2384 /* ProductCardCarrousselView.swift in Sources */,
 				B21A13D82C7420AB005B2384 /* UIViewConstraints+Extensions.swift in Sources */,
 				B21A13E12C7424B4005B2384 /* Environment.swift in Sources */,
 				B21A14152C75784C005B2384 /* SpotlightModel.swift in Sources */,
+				B21A147A2C78D1CE005B2384 /* DigioAlertViewController.swift in Sources */,
 				B21A141A2C7578DB005B2384 /* CashModel.swift in Sources */,
 				B21A14512C778729005B2384 /* SpotlightCardViewCell.swift in Sources */,
 				B2C4C7D02C741ACE0001A9DD /* AppDelegate.swift in Sources */,
+				B21A14812C790D3E005B2384 /* AlertViewModel.swift in Sources */,
 				B2C4C7D22C741ACE0001A9DD /* SceneDelegate.swift in Sources */,
 				B21A14712C784CD3005B2384 /* RechardDetailCoordinator.swift in Sources */,
 				B21A14612C77DF61005B2384 /* HomeDetailView.swift in Sources */,

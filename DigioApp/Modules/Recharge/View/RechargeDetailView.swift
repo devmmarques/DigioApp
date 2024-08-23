@@ -75,7 +75,7 @@ class RechargeDetailView: UIView, RechargeDetailViewProtocol {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(didContinue), for: .touchUpInside)
-        button.applyButtonGreen()
+        button.applyPrimaryButton()
         button.setTitle("CONTINUE", for: .normal)
         return button
     }()
@@ -104,7 +104,7 @@ extension RechargeDetailView {
     }
     
     @objc func didContinue() {
-        
+        delegate?.didTapContinue()
     }
 }
 
@@ -159,7 +159,7 @@ extension RechargeDetailView: CodeViewProtocol {
         footerView
             .leadingAnchor(equalTo: leadingAnchor)
             .trailingAnchor(equalTo: trailingAnchor)
-            .bottomAnchor(equalTo: bottomAnchor)
+            .bottomAnchor(equalTo: safeAreaLayoutGuide.bottomAnchor)
         
         logoImage.heightAnchor(equalTo: 180.0)
             
@@ -168,9 +168,5 @@ extension RechargeDetailView: CodeViewProtocol {
     func setupAdditionalConfiguration() {
         internalView.backgroundColor = .white
         backgroundColor = .clear
-        
-//        logoImage.layer.cornerRadius = 12.0
-//        logoImage.layer.masksToBounds = true
-//        logoImage.layoutIfNeeded()
     }
 }

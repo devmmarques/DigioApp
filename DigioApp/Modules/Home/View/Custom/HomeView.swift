@@ -52,10 +52,9 @@ final class HomeView: UIView, HomeViewProtocol {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.didTapAction = { [weak self] model in
             guard let self = self else { return }
-            self.delegate?.didOpenDetail(model: .init(title: model.name,
+            self.delegate?.didOpenRechard(model: .init(title: model.name,
                                                       imageURL: model.imageURL,
-                                                      description: model.description,
-                                                      isFull: false))
+                                                      description: model.description))
         }
         return view
     }()

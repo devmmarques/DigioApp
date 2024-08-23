@@ -9,6 +9,10 @@ import UIKit
 
 extension UIColor {
     static let digioBlue = UIColor(red: 6/255, green: 0/255, blue: 71/255, alpha: 1.0)
+    static let digioError = UIColor(hex: "#DC5D59")
+    static let digioWarning = UIColor(hex: "#F5C35F")
+    static let digioPrimaryColor = UIColor(hex: "#55AB8A")
+    
     
     convenience init(hex: String) {
         var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
