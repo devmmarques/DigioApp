@@ -11,4 +11,5 @@ struct RechargeDetailModel {
     let title: String
     let imageURL: String
     let description: String
+    var isFull: Bool = true
 }

@@ -9,21 +9,17 @@ import UIKit
 
 protocol HomeViewControllerProtocol: AnyObject {
     func update(model: ListHomeModel)
-    func showError()
 }
 
 class HomeViewController: BaseViewController {
     
     private var viewModel: HomeViewModelProtocol
     private let homeView: HomeViewProtocol
-    var coordinator: HomeCoordinatorProtocol?
     
     init(viewModel: HomeViewModelProtocol,
-         homeView: HomeViewProtocol,
-         coordinator: HomeCoordinatorProtocol) {
+         homeView: HomeViewProtocol) {
         self.viewModel = viewModel
         self.homeView = homeView
-        self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
         self.viewModel.delegate = self
         self.homeView.delegate = self
@@ -53,26 +49,20 @@ extension HomeViewController: HomeViewControllerProtocol {
     }
     
     func showError() {
-        coordinator?.showAlert(alert: .init(status: .error,
-                                            title: "Erro ao carregar",
-                                            description: "Não foi possível carregar os dados \n Deseja tentar novamente ?",
-                                            titlePrimaryButton: "Sim",
-                                            titleSecondaryButton: "Não",
-                                            actionPrimaryButton: { [weak self] in
-            self?.viewModel.fetchHome()
-        },
-                                            actionSecondaryButton: { [weak self] in
-            self?.dismiss(animated: true)
-        }))
+        
     }
 }
 
 extension HomeViewController: HomeViewDelegate {
-    func didOpenDetail(model: HomeDetailModel) {
-        coordinator?.openDetailView(model: model)
+    func didOpenProductDetail(model: ProductModel) {
+        viewModel.didOpenProductDetail(model: model)
     }
     
-    func didOpenRechard(model: RechargeDetailModel) {
-        coordinator?.openRechargeDetail(model: model)
+    func didOpenRechargeDetail(model: SpotlightModel) {
+        viewModel.didOpenRechargeDetail(model: model)
+    }
+    
+    func didOpenCashDetail(model: CashModel) {
+        viewModel.didOpenCashDetail(model: model)
     }
 }

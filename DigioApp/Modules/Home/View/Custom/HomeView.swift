@@ -15,8 +15,9 @@ protocol HomeViewProtocol: UIView {
 }
 
 protocol HomeViewDelegate: AnyObject {
-    func didOpenDetail(model: HomeDetailModel)
-    func didOpenRechard(model: RechargeDetailModel)
+    func didOpenProductDetail(model: ProductModel)
+    func didOpenRechargeDetail(model: SpotlightModel)
+    func didOpenCashDetail(model: CashModel)
 }
 
 final class HomeView: UIView, HomeViewProtocol {
@@ -52,9 +53,7 @@ final class HomeView: UIView, HomeViewProtocol {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.didTapAction = { [weak self] model in
             guard let self = self else { return }
-            self.delegate?.didOpenRechard(model: .init(title: model.name,
-                                                      imageURL: model.imageURL,
-                                                      description: model.description))
+            self.delegate?.didOpenProductDetail(model: model)
         }
         return view
     }()
@@ -64,10 +63,7 @@ final class HomeView: UIView, HomeViewProtocol {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.didTapAction = { [weak self] model in
             guard let self = self else { return }
-            self.delegate?.didOpenDetail(model: .init(title: model.title,
-                                                      imageURL: model.bannerUrl,
-                                                      description: model.description,
-                                                      isFull: true))
+            self.delegate?.didOpenCashDetail(model: model)
         }
         return view
     }()
@@ -77,9 +73,7 @@ final class HomeView: UIView, HomeViewProtocol {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.didTapAction = { [weak self] model in
             guard let self = self else { return }
-            self.delegate?.didOpenRechard(model: .init(title: model.name,
-                                                      imageURL: model.bannerUrl,
-                                                      description: model.description))
+            self.delegate?.didOpenRechargeDetail(model: model)
         }
         return view
     }()

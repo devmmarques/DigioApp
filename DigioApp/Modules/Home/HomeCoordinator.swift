@@ -11,6 +11,7 @@ protocol HomeCoordinatorProtocol: AnyObject {
     func openDetailView(model: HomeDetailModel)
     func openRechargeDetail(model: RechargeDetailModel)
     func showAlert(alert: AlertViewModel)
+    func closedView()
 }
 
 class HomeCoordinator: Coordinator {
@@ -21,10 +22,10 @@ class HomeCoordinator: Coordinator {
         self.navigationController = navigation
     }
     func start() {
-        let homeViewModel = HomeViewModel(service: HomeService(service: DigioBaseService()))
+        let homeViewModel = HomeViewModel(service: HomeService(service: DigioBaseService()), coordinator: self)
         let homeView = HomeView()
         let homeViewController = HomeViewController(viewModel: homeViewModel,
-                                                  homeView: homeView, coordinator: self)
+                                                    homeView: homeView)
         navigationController.pushViewController(homeViewController, animated: true)
     }
 }
@@ -45,6 +46,10 @@ extension HomeCoordinator: HomeCoordinatorProtocol {
     func showAlert(alert: AlertViewModel) {
         let alert = DigioAlertViewController(alert: alert)
         navigationController.present(alert, animated: true)
+    }
+    
+    func closedView() {
+        navigationController.dismiss(animated: true)
     }
     
 }

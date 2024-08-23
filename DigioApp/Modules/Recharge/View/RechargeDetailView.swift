@@ -95,6 +95,11 @@ class RechargeDetailView: UIView, RechargeDetailViewProtocol {
         self.titleLabel.text = model.title
         self.logoImage.loading(url: model.imageURL)
         self.descriptionLabel.text = model.description
+        
+        if !model.isFull {
+            logoImage.contentMode = .scaleAspectFit
+            self.layoutSubviews()
+        }
     }
 }
 extension RechargeDetailView {
