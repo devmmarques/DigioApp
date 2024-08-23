@@ -32,6 +32,49 @@ O projeto segue a arquitetura MVVM (Model-View-ViewModel), facilitando a separa�
 
 ## Instalação
 
+### 1. Instalar o Homebrew (se ainda não tiver instalado)
+
+O Homebrew é um gerenciador de pacotes que facilita a instalação de software no macOS. Para instalá-lo:
+
+1. Abra o Terminal.
+2. Execute o comando abaixo:
+
+   ```sh
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+
+3. Siga as instruções no Terminal e adicione o Homebrew ao PATH, se solicitado.
+
+4. Verifique a instalação:
+
+   ```sh
+   brew --version
+   ```
+
+### 2. Instalar o SwiftLint
+
+SwiftLint é uma ferramenta que ajuda a manter a consistência e a qualidade do código Swift:
+
+1. Com o Homebrew instalado, execute o seguinte comando no Terminal:
+
+   ```sh
+   brew install swiftlint
+   ```
+
+### 3. Configurar o SwiftLint no Projeto
+
+1. No Xcode, adicione uma nova fase de execução de script (`Run Script Phase`) em "Build Phases":
+   
+   ```sh
+   if which swiftlint > /dev/null; then
+       swiftlint
+   else
+       echo "warning: SwiftLint não está instalado. Instale usando 'brew install swiftlint'"
+   fi
+   ```
+
+### 4. Clonar o Repositório e Executar o Projeto
+
 1. Clone o repositório:
    \`\`\`sh
    git clone https://github.com/devmmarques/DigioApp.git
@@ -44,6 +87,7 @@ O projeto segue a arquitetura MVVM (Model-View-ViewModel), facilitando a separa�
 3. Construa e execute o aplicativo:
    - Selecione o target `DigioApp`.
    - Pressione `Cmd + R` para rodar no simulador.
+
 
 ## Como Usar
 
