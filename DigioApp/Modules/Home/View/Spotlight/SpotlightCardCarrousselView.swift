@@ -30,6 +30,8 @@ class SpotlightCardCarrousselView: UIView {
     }()
     
     // MARK: Prorperties
+    var didTapAction: ((SpotlightModel) -> Void)?
+    
     private var model: [SpotlightModel]?{
         didSet {
             DispatchQueue.main.async {
@@ -68,6 +70,16 @@ extension SpotlightCardCarrousselView: UICollectionViewDataSource {
         return cell
     }
 }
+
+extension SpotlightCardCarrousselView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let spotLight = model {
+            let model = spotLight[indexPath.row]
+            didTapAction?(model)
+        }
+    }
+}
+
 
 extension SpotlightCardCarrousselView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

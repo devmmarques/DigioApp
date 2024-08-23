@@ -1,18 +1,19 @@
 //
-//  HomeDetailView.swift
+//  RechargeDetailView.swift
 //  DigioApp
 //
-//  Created by Marco Marques on 22/08/24.
+//  Created by Marco Marques on 23/08/24.
 //
+
 
 import UIKit
 
-protocol HomeDetailViewProtocol: UIView {
-    var delegate: HomeDetailViewControllerProtocol? { get set}
-    func configure(model: HomeDetailModel)
+protocol RechargeDetailViewProtocol: UIView {
+    var delegate: RechargeDetailViewControllerProtocol? { get set}
+    func configure(model: RechargeDetailModel)
 }
 
-class HomeDetailView: UIView, HomeDetailViewProtocol {
+class RechargeDetailView: UIView, RechargeDetailViewProtocol {
     
     private lazy var internalView: UIView = {
         let view = UIView()
@@ -29,22 +30,10 @@ class HomeDetailView: UIView, HomeDetailViewProtocol {
         return scroll
     }()
     
-    private lazy var internalStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.distribution = .fill
-        stackView.alignment = .center
-        stackView.axis = .vertical
-        stackView.spacing = 12.0
-        return stackView
-    }()
-    
-    private lazy var buttonClosed: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(didTapClosed), for: .touchUpInside)
-        button.setImage(UIImage(named: "icon-btn-closed"), for: .normal)
-        return button
+    private lazy var logoImage: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        return image
     }()
     
     private lazy var titleLabel: UILabel = {
@@ -56,11 +45,14 @@ class HomeDetailView: UIView, HomeDetailViewProtocol {
         return label
     }()
     
-    private lazy var logoImage: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .redraw
-        return image
+    private lazy var internalStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.distribution = .fill
+        stackView.alignment = .center
+        stackView.axis = .vertical
+        stackView.spacing = 24.0
+        return stackView
     }()
     
     private lazy var descriptionLabel: UILabel = {
@@ -72,7 +64,6 @@ class HomeDetailView: UIView, HomeDetailViewProtocol {
         label.font = UIFont.FontBold(size: 18.0)
         return label
     }()
-    
     
     private lazy var footerView: UIView = {
         let view = UIView()
@@ -89,7 +80,7 @@ class HomeDetailView: UIView, HomeDetailViewProtocol {
         return button
     }()
     
-    weak var delegate: HomeDetailViewControllerProtocol?
+    weak var delegate: RechargeDetailViewControllerProtocol?
     
     init() {
         super.init(frame: .zero)
@@ -100,21 +91,13 @@ class HomeDetailView: UIView, HomeDetailViewProtocol {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(model: HomeDetailModel) {
+    func configure(model: RechargeDetailModel) {
         self.titleLabel.text = model.title
         self.logoImage.loading(url: model.imageURL)
         self.descriptionLabel.text = model.description
-        
-        if !model.isFull {
-            logoImage.heightAnchor(equalTo: 56).widthAnchor(equalTo: 56)
-            self.layoutSubviews()
-        } else {
-            logoImage.heightAnchor(equalTo: 100)
-            self.layoutSubviews()
-        }
     }
 }
-extension HomeDetailView {
+extension RechargeDetailView {
     
     @objc func didTapClosed() {
         delegate?.didTapClosed()
@@ -126,18 +109,18 @@ extension HomeDetailView {
 }
 
 
-extension HomeDetailView: CodeViewProtocol {
+extension RechargeDetailView: CodeViewProtocol {
     func buildViewHierarchy() {
-        internalView.addSubview(buttonClosed)
-        internalView.addSubview(internalStackView)
-        scrollView.addSubview(internalView)
         
+        scrollView.addSubview(internalView)
         footerView.addSubview(buttonContinue)
         addSubview(scrollView)
         addSubview(footerView)
         
+        internalView.addSubview(logoImage)
+        internalView.addSubview(internalStackView)
+        
         internalStackView.addArrangedSubview(titleLabel)
-        internalStackView.addArrangedSubview(logoImage)
         internalStackView.addArrangedSubview(descriptionLabel)
     }
     
@@ -155,17 +138,16 @@ extension HomeDetailView: CodeViewProtocol {
             .trailingAnchor(equalTo: scrollView.trailingAnchor)
             .bottomAnchor(equalTo: scrollView.bottomAnchor)
         
-        buttonClosed
-            .topAnchor(equalTo: internalView.topAnchor, constant: 16)
-            .trailingAnchor(equalTo: internalView.trailingAnchor, constant: -16)
-            .heightAnchor(equalTo: 18)
-            .widthAnchor(equalTo: 18)
+        logoImage
+            .topAnchor(equalTo: internalView.topAnchor)
+            .leadingAnchor(equalTo: internalView.leadingAnchor)
+            .trailingAnchor(equalTo: internalView.trailingAnchor)
         
         internalStackView
-            .topAnchor(equalTo: buttonClosed.bottomAnchor, constant: 16)
-            .leadingAnchor(equalTo: internalView.leadingAnchor, constant: 16)
-            .trailingAnchor(equalTo: internalView.trailingAnchor, constant: -16)
-            .bottomAnchor(equalTo: internalView.bottomAnchor, constant: -52)
+            .topAnchor(equalTo: logoImage.bottomAnchor, constant: 16.0)
+            .leadingAnchor(equalTo: internalView.leadingAnchor, constant: 16.0)
+            .trailingAnchor(equalTo: internalView.trailingAnchor, constant: -16.0)
+            .bottomAnchor(equalTo: internalView.bottomAnchor, constant: -52.0)
             
         buttonContinue
             .topAnchor(equalTo: footerView.topAnchor, constant: 12.0)
@@ -177,7 +159,9 @@ extension HomeDetailView: CodeViewProtocol {
         footerView
             .leadingAnchor(equalTo: leadingAnchor)
             .trailingAnchor(equalTo: trailingAnchor)
-            .bottomAnchor(equalTo: safeAreaLayoutGuide.bottomAnchor)
+            .bottomAnchor(equalTo: bottomAnchor)
+        
+        logoImage.heightAnchor(equalTo: 180.0)
             
     }
     
@@ -185,8 +169,8 @@ extension HomeDetailView: CodeViewProtocol {
         internalView.backgroundColor = .white
         backgroundColor = .clear
         
-        logoImage.layer.cornerRadius = 12.0
-        logoImage.layer.masksToBounds = true
-        logoImage.layoutIfNeeded()
+//        logoImage.layer.cornerRadius = 12.0
+//        logoImage.layer.masksToBounds = true
+//        logoImage.layoutIfNeeded()
     }
 }

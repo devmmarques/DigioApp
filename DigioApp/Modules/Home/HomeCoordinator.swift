@@ -9,6 +9,7 @@ import UIKit
 
 protocol HomeCoordinatorProtocol {
     func openDetailView(model: HomeDetailModel)
+    func openRechargeDetail(model: RechargeDetailModel)
 }
 
 class HomeCoordinator: Coordinator {
@@ -34,5 +35,10 @@ extension HomeCoordinator: HomeCoordinatorProtocol {
         coordinator.openDetail(model: model)
     }
     
+    func openRechargeDetail(model: RechargeDetailModel) {
+        let coordinator = RechargeDetailCoordinator(navigationController: self.navigation)
+        childCoordinators.append(coordinator)
+        coordinator.openDetail(model: model)
+    }
     
 }

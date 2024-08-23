@@ -25,8 +25,7 @@ final class HomeDetailCoordinator: Coordinator {
         navigationController.present(homeDetailViewController, animated: true)
     }
     
-    
     func closedView() {
-        navigationController.popViewController(animated: true)
+        navigationController.dismiss(animated: true)
     }
 }

@@ -56,4 +56,8 @@ extension HomeViewController: HomeViewDelegate {
     func didOpenDetail(model: HomeDetailModel) {
         coordinator?.openDetailView(model: model)
     }
+    
+    func didOpenRechard(model: RechargeDetailModel) {
+        coordinator?.openRechargeDetail(model: model)
+    }
 }

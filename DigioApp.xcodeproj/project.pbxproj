@@ -61,6 +61,11 @@
 		B21A14652C78126B005B2384 /* HomeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14642C78126B005B2384 /* HomeDetailViewModel.swift */; };
 		B21A14682C78129C005B2384 /* HomeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14672C78129C005B2384 /* HomeDetailModel.swift */; };
 		B21A146A2C781C19005B2384 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14692C781C19005B2384 /* UIButton+Extensions.swift */; };
+		B21A146D2C784C3E005B2384 /* RechargeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A146C2C784C3E005B2384 /* RechargeDetailViewController.swift */; };
+		B21A146F2C784C99005B2384 /* RechargeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A146E2C784C99005B2384 /* RechargeDetailViewModel.swift */; };
+		B21A14712C784CD3005B2384 /* RechardDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14702C784CD3005B2384 /* RechardDetailCoordinator.swift */; };
+		B21A14742C784CF8005B2384 /* RechargeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14732C784CF8005B2384 /* RechargeDetailModel.swift */; };
+		B21A14772C784D25005B2384 /* RechargeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14762C784D25005B2384 /* RechargeDetailView.swift */; };
 		B2C4C7D02C741ACE0001A9DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7CF2C741ACE0001A9DD /* AppDelegate.swift */; };
 		B2C4C7D22C741ACE0001A9DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7D12C741ACE0001A9DD /* SceneDelegate.swift */; };
 		B2C4C7D92C741ACF0001A9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C4C7D82C741ACF0001A9DD /* Assets.xcassets */; };
@@ -141,6 +146,11 @@
 		B21A14642C78126B005B2384 /* HomeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewModel.swift; sourceTree = "<group>"; };
 		B21A14672C78129C005B2384 /* HomeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailModel.swift; sourceTree = "<group>"; };
 		B21A14692C781C19005B2384 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		B21A146C2C784C3E005B2384 /* RechargeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargeDetailViewController.swift; sourceTree = "<group>"; };
+		B21A146E2C784C99005B2384 /* RechargeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargeDetailViewModel.swift; sourceTree = "<group>"; };
+		B21A14702C784CD3005B2384 /* RechardDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechardDetailCoordinator.swift; sourceTree = "<group>"; };
+		B21A14732C784CF8005B2384 /* RechargeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargeDetailModel.swift; sourceTree = "<group>"; };
+		B21A14762C784D25005B2384 /* RechargeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargeDetailView.swift; sourceTree = "<group>"; };
 		B2C4C7CC2C741ACE0001A9DD /* DigioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C4C7CF2C741ACE0001A9DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2C4C7D12C741ACE0001A9DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -283,6 +293,7 @@
 		B21A14062C756BF1005B2384 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B21A146B2C784BED005B2384 /* Recharge */,
 				B21A145C2C77DF28005B2384 /* HomeDetail */,
 				B21A14072C756BFE005B2384 /* Home */,
 				B21A14582C77D082005B2384 /* DigioCoordinator.swift */,
@@ -433,6 +444,34 @@
 				B21A14672C78129C005B2384 /* HomeDetailModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B21A146B2C784BED005B2384 /* Recharge */ = {
+			isa = PBXGroup;
+			children = (
+				B21A14752C784D16005B2384 /* View */,
+				B21A14722C784CEB005B2384 /* Model */,
+				B21A146C2C784C3E005B2384 /* RechargeDetailViewController.swift */,
+				B21A146E2C784C99005B2384 /* RechargeDetailViewModel.swift */,
+				B21A14702C784CD3005B2384 /* RechardDetailCoordinator.swift */,
+			);
+			path = Recharge;
+			sourceTree = "<group>";
+		};
+		B21A14722C784CEB005B2384 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B21A14732C784CF8005B2384 /* RechargeDetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B21A14752C784D16005B2384 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B21A14762C784D25005B2384 /* RechargeDetailView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B2C4C7C32C741ACE0001A9DD = {
@@ -628,13 +667,16 @@
 				B21A144A2C776A6F005B2384 /* String+Extensions.swift in Sources */,
 				B21A14342C76BD50005B2384 /* UICollectionView+Extensions.swift in Sources */,
 				B21A14232C757AA7005B2384 /* HomeService.swift in Sources */,
+				B21A14772C784D25005B2384 /* RechargeDetailView.swift in Sources */,
 				B21A14252C757DD7005B2384 /* HomeViewModel.swift in Sources */,
 				B21A13F32C7427BD005B2384 /* DigioNetworkBaseError.swift in Sources */,
 				B21A14562C77D01F005B2384 /* Coordinator.swift in Sources */,
 				B21A14462C77669C005B2384 /* DigioFont.swift in Sources */,
+				B21A14742C784CF8005B2384 /* RechargeDetailModel.swift in Sources */,
 				B21A14652C78126B005B2384 /* HomeDetailViewModel.swift in Sources */,
 				B21A14132C7576D6005B2384 /* HomeResponse.swift in Sources */,
 				B21A13DB2C7420F1005B2384 /* CodeViewProtocol.swift in Sources */,
+				B21A146D2C784C3E005B2384 /* RechargeDetailViewController.swift in Sources */,
 				B21A13EB2C7425DE005B2384 /* DigioBaseServiceProtocol.swift in Sources */,
 				B21A144F2C778629005B2384 /* SpotlightCardCarrousselView.swift in Sources */,
 				B21A142E2C76A4A9005B2384 /* ProductCardViewCell.swift in Sources */,
@@ -656,12 +698,14 @@
 				B21A14512C778729005B2384 /* SpotlightCardViewCell.swift in Sources */,
 				B2C4C7D02C741ACE0001A9DD /* AppDelegate.swift in Sources */,
 				B2C4C7D22C741ACE0001A9DD /* SceneDelegate.swift in Sources */,
+				B21A14712C784CD3005B2384 /* RechardDetailCoordinator.swift in Sources */,
 				B21A14612C77DF61005B2384 /* HomeDetailView.swift in Sources */,
 				B21A14592C77D082005B2384 /* DigioCoordinator.swift in Sources */,
 				B21A140F2C75766F005B2384 /* ProductResponse.swift in Sources */,
 				B21A14092C756C0D005B2384 /* HomeViewController.swift in Sources */,
 				B21A13E72C742561005B2384 /* HTTPMethod.swift in Sources */,
 				B21A13EF2C7426CA005B2384 /* RequestProtocol.swift in Sources */,
+				B21A146F2C784C99005B2384 /* RechargeDetailViewModel.swift in Sources */,
 				B21A14272C758398005B2384 /* HomeView.swift in Sources */,
 				B21A14392C76D75D005B2384 /* DigioProductView.swift in Sources */,
 				B21A145E2C77DF37005B2384 /* HomeDetailViewController.swift in Sources */,
