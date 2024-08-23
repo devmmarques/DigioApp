@@ -84,7 +84,11 @@ SwiftLint é uma ferramenta que ajuda a manter a consistência e a qualidade do 
    cd DigioApp
    open DigioApp.xcodeproj
    \`\`\`
-3. Construa e execute o aplicativo:
+3. Instale as dependências (se aplicável):
+   ```sh
+   pod install
+   ```
+4. Construa e execute o aplicativo:
    - Selecione o target `DigioApp`.
    - Pressione `Cmd + R` para rodar no simulador.
 
@@ -105,6 +109,8 @@ O projeto inclui testes unitários abrangentes, focados na ViewModel e nos Coord
   Cmd + U
   \`\`\`
 - Verifique a cobertura de testes no relatório de testes do Xcode.
+
+- Para os teste de Screenshoot, precisa alterar a variável recordMode para true na classe HomeViewControllerSnapshotTests.
 
 ## Licença
 

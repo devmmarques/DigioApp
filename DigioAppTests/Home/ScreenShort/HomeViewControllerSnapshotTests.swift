@@ -26,7 +26,7 @@ class HomeViewControllerSnapshotTests: SnapshotTestCase {
         viewController = HomeViewController(viewModel: viewModel, homeView: HomeView())
         viewModel.delegate = viewController
         // Ative para gravar a imagem de referência na primeira vez.
-//        self.recordMode = true
+        self.recordMode = false
     }
     
     override func tearDown() {
@@ -38,9 +38,10 @@ class HomeViewControllerSnapshotTests: SnapshotTestCase {
     }
 
     func testMyViewController() {
-        mockService.fetchResult = .success(ModelMock.homeResponse)
+        mockService.fetchResult = .success(ModelMockScreenshoot.homeResponse)
+        viewModel.mockHomeResponse = ModelMockScreenshoot.homeResponse
         viewController.viewDidLoad()
-//        FBSnapshotVerifyView(mockDelegate.view)
+        
         verifyViewController(viewController)
     }
 }

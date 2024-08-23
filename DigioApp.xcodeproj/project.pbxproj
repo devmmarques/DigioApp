@@ -572,6 +572,7 @@
 		B247559B2C79402000331D87 /* ScreenShort */ = {
 			isa = PBXGroup;
 			children = (
+				B247559C2C7940EC00331D87 /* SnapshotTestCase.swift */,
 				B2B8F7F02C793ACF0036A3D0 /* HomeViewControllerSnapshotTests.swift */,
 			);
 			path = ScreenShort;
@@ -620,7 +621,6 @@
 			children = (
 				B21A14822C791CA4005B2384 /* Home */,
 				B21A13F82C756640005B2384 /* Network */,
-				B247559C2C7940EC00331D87 /* SnapshotTestCase.swift */,
 			);
 			path = DigioAppTests;
 			sourceTree = "<group>";

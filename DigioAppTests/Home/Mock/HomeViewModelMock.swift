@@ -29,6 +29,7 @@ class HomeViewModelMock: HomeViewModelProtocol {
                 let model = ListHomeModel(spotlight: response.spotlight,
                                           products: response.products,
                                           cash: response.cash)
+                
                 delegate?.update(model: model)
             } else {
                 coordinator?.showAlert(alert: .init(status: .error,
