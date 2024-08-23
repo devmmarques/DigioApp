@@ -1,0 +1,36 @@
+# Arquivos que serão analisados
+included:
+  - DigioApp/
+  - Tests/
+
+# Arquivos e diretórios que serão ignorados
+excluded:
+  - Pods/
+  - Carthage/
+  - DigioApp/Generated/
+
+# Desativando regras específicas
+disabled_rules:
+  # - line_length
+  - type_name
+
+# Habilitando regras específicas
+opt_in_rules:
+  - force_unwrapping
+  - empty_count
+  - closure_end_indentation
+
+# Configuração de regras específicas
+line_length:
+  warning: 120
+  error: 150
+  ignores_comments: true
+  ignores_urls: true
+
+type_name:
+  min_length: 3
+  max_length: 40
+  excluded: iPhone
+
+# Reportando avisos como erros
+treat_warning_as_error: true

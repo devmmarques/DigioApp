@@ -1,62 +1,97 @@
 # Xcode
 #
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
-
-## User settings
+build/
+DerivedData/
+*.xcworkspace
 xcuserdata/
-
-## Obj-C/Swift specific
-*.hmap
-
-## App packaging
-*.ipa
-*.dSYM.zip
-*.dSYM
-
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
+*.xccheckout
+*.xcscmblueprint
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/xcshareddata/xcschemes/
+!*.xcassets
+*.moved-aside
+*.xcuserstate
 
 # Swift Package Manager
 #
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-# Package.resolved
-# *.xcodeproj
-#
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
-
 .build/
+# Package.resolved
+# Uncomment the next line if you want to ignore the Package.resolved file
+# since it tends to change often and you may not want to commit it.
+# Package.resolved
 
 # CocoaPods
 #
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
+Pods/
+Podfile.lock
+.project/
 
 # Carthage
 #
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
 Carthage/Build/
+Carthage/Checkouts/
 
-# fastlane
+# Fastlane
 #
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
-
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
-fastlane/test_output
+fastlane/test_output/
+
+# Code Injection by AppCode
+#
+.idea/
+# User-specific files
+*.swp
+*.swo
+*.swn
+*~
+
+# Dependency manager directories
+.cartfile
+*.framework
+*.dSYM
+
+# IDE
+# .vscode/
+.idea/
+# Editor
+.vscode/
+
+# macOS
+.DS_Store
+
+# Generated files
+*.g.dart
+*.m.dart
+*.c.dart
+
+# Testing
+*.log
+*.result
+*.junit
+
+# Ignore compiled files
+*.o
+*.a
+*.so
+*.lib
+*.dll
+
+# Ignore archive and backup files
+*.tar.gz
+*.tgz
+*.tar
+*.gz
+*.zip
+*.rar
+*.bz2
+*.7z
+*.bak
+
+# Ignore dependency directories
+Pods/
+Carthage/
+fastlane/
