@@ -17,10 +17,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         
-        let viewModel = HomeViewModel(service: HomeService(service: DigioBaseService()))
-        let navigationController = UINavigationController(rootViewController: HomeViewController(viewModel: viewModel, homeView: HomeView()))
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
+        let digioCoordinator = DigioCoordinator(window: window!)
+        digioCoordinator.start()
+//        let viewModel = HomeViewModel(service: HomeService(service: DigioBaseService()))
+//        let navigationController = UINavigationController(rootViewController: HomeViewController(viewModel: viewModel, homeView: HomeView()))
+//        window?.rootViewController = navigationController
+//        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

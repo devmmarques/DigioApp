@@ -40,11 +40,11 @@
 		B21A14342C76BD50005B2384 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14332C76BD50005B2384 /* UICollectionView+Extensions.swift */; };
 		B21A14362C76BF8B005B2384 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14352C76BF8B005B2384 /* UIImageView+Extensions.swift */; };
 		B21A14392C76D75D005B2384 /* DigioProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14382C76D75D005B2384 /* DigioProductView.swift */; };
-		B21A14402C7765C7005B2384 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B21A143B2C7765C6005B2384 /* Montserrat-Medium.ttf */; };
-		B21A14412C7765C7005B2384 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B21A143C2C7765C7005B2384 /* Montserrat-Bold.ttf */; };
-		B21A14422C7765C7005B2384 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B21A143D2C7765C7005B2384 /* Montserrat-Regular.ttf */; };
-		B21A14432C7765C7005B2384 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B21A143E2C7765C7005B2384 /* Montserrat-ExtraBold.ttf */; };
-		B21A14442C7765C7005B2384 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B21A143F2C7765C7005B2384 /* Montserrat-SemiBold.ttf */; };
+		B21A14402C7765C7005B2384 /* MontserratMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B21A143B2C7765C6005B2384 /* MontserratMedium.ttf */; };
+		B21A14412C7765C7005B2384 /* MontserratBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B21A143C2C7765C7005B2384 /* MontserratBold.ttf */; };
+		B21A14422C7765C7005B2384 /* MontserratRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B21A143D2C7765C7005B2384 /* MontserratRegular.ttf */; };
+		B21A14432C7765C7005B2384 /* MontserratExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B21A143E2C7765C7005B2384 /* MontserratExtraBold.ttf */; };
+		B21A14442C7765C7005B2384 /* MontserratSemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B21A143F2C7765C7005B2384 /* MontserratSemiBold.ttf */; };
 		B21A14462C77669C005B2384 /* DigioFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14452C77669C005B2384 /* DigioFont.swift */; };
 		B21A14482C776885005B2384 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14472C776885005B2384 /* UIColor+Extensions.swift */; };
 		B21A144A2C776A6F005B2384 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14492C776A6F005B2384 /* String+Extensions.swift */; };
@@ -52,6 +52,15 @@
 		B21A144F2C778629005B2384 /* SpotlightCardCarrousselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A144E2C778629005B2384 /* SpotlightCardCarrousselView.swift */; };
 		B21A14512C778729005B2384 /* SpotlightCardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14502C778729005B2384 /* SpotlightCardViewCell.swift */; };
 		B21A14532C77A5B3005B2384 /* UIView+Estensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14522C77A5B3005B2384 /* UIView+Estensions.swift */; };
+		B21A14562C77D01F005B2384 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14552C77D01F005B2384 /* Coordinator.swift */; };
+		B21A14592C77D082005B2384 /* DigioCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14582C77D082005B2384 /* DigioCoordinator.swift */; };
+		B21A145B2C77D1D0005B2384 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A145A2C77D1D0005B2384 /* HomeCoordinator.swift */; };
+		B21A145E2C77DF37005B2384 /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A145D2C77DF37005B2384 /* HomeDetailViewController.swift */; };
+		B21A14612C77DF61005B2384 /* HomeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14602C77DF61005B2384 /* HomeDetailView.swift */; };
+		B21A14632C77E1E8005B2384 /* HomeDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14622C77E1E8005B2384 /* HomeDetailCoordinator.swift */; };
+		B21A14652C78126B005B2384 /* HomeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14642C78126B005B2384 /* HomeDetailViewModel.swift */; };
+		B21A14682C78129C005B2384 /* HomeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14672C78129C005B2384 /* HomeDetailModel.swift */; };
+		B21A146A2C781C19005B2384 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14692C781C19005B2384 /* UIButton+Extensions.swift */; };
 		B2C4C7D02C741ACE0001A9DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7CF2C741ACE0001A9DD /* AppDelegate.swift */; };
 		B2C4C7D22C741ACE0001A9DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7D12C741ACE0001A9DD /* SceneDelegate.swift */; };
 		B2C4C7D92C741ACF0001A9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C4C7D82C741ACF0001A9DD /* Assets.xcassets */; };
@@ -111,11 +120,11 @@
 		B21A14332C76BD50005B2384 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		B21A14352C76BF8B005B2384 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		B21A14382C76D75D005B2384 /* DigioProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioProductView.swift; sourceTree = "<group>"; };
-		B21A143B2C7765C6005B2384 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
-		B21A143C2C7765C7005B2384 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
-		B21A143D2C7765C7005B2384 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
-		B21A143E2C7765C7005B2384 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
-		B21A143F2C7765C7005B2384 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		B21A143B2C7765C6005B2384 /* MontserratMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MontserratMedium.ttf; sourceTree = "<group>"; };
+		B21A143C2C7765C7005B2384 /* MontserratBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MontserratBold.ttf; sourceTree = "<group>"; };
+		B21A143D2C7765C7005B2384 /* MontserratRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MontserratRegular.ttf; sourceTree = "<group>"; };
+		B21A143E2C7765C7005B2384 /* MontserratExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MontserratExtraBold.ttf; sourceTree = "<group>"; };
+		B21A143F2C7765C7005B2384 /* MontserratSemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MontserratSemiBold.ttf; sourceTree = "<group>"; };
 		B21A14452C77669C005B2384 /* DigioFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioFont.swift; sourceTree = "<group>"; };
 		B21A14472C776885005B2384 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		B21A14492C776A6F005B2384 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
@@ -123,6 +132,15 @@
 		B21A144E2C778629005B2384 /* SpotlightCardCarrousselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightCardCarrousselView.swift; sourceTree = "<group>"; };
 		B21A14502C778729005B2384 /* SpotlightCardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightCardViewCell.swift; sourceTree = "<group>"; };
 		B21A14522C77A5B3005B2384 /* UIView+Estensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Estensions.swift"; sourceTree = "<group>"; };
+		B21A14552C77D01F005B2384 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B21A14582C77D082005B2384 /* DigioCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioCoordinator.swift; sourceTree = "<group>"; };
+		B21A145A2C77D1D0005B2384 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		B21A145D2C77DF37005B2384 /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
+		B21A14602C77DF61005B2384 /* HomeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailView.swift; sourceTree = "<group>"; };
+		B21A14622C77E1E8005B2384 /* HomeDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailCoordinator.swift; sourceTree = "<group>"; };
+		B21A14642C78126B005B2384 /* HomeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewModel.swift; sourceTree = "<group>"; };
+		B21A14672C78129C005B2384 /* HomeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailModel.swift; sourceTree = "<group>"; };
+		B21A14692C781C19005B2384 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		B2C4C7CC2C741ACE0001A9DD /* DigioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C4C7CF2C741ACE0001A9DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2C4C7D12C741ACE0001A9DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +181,7 @@
 		B21A13D02C741F5F005B2384 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				B21A14542C77D00F005B2384 /* Coordinator */,
 				B21A13D92C7420E2005B2384 /* Utils */,
 				B21A13D62C742085005B2384 /* Extensions */,
 			);
@@ -180,6 +199,7 @@
 				B21A14472C776885005B2384 /* UIColor+Extensions.swift */,
 				B21A14492C776A6F005B2384 /* String+Extensions.swift */,
 				B21A14522C77A5B3005B2384 /* UIView+Estensions.swift */,
+				B21A14692C781C19005B2384 /* UIButton+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -263,7 +283,9 @@
 		B21A14062C756BF1005B2384 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B21A145C2C77DF28005B2384 /* HomeDetail */,
 				B21A14072C756BFE005B2384 /* Home */,
+				B21A14582C77D082005B2384 /* DigioCoordinator.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -275,6 +297,7 @@
 				B21A14162C7578AF005B2384 /* Model */,
 				B21A14082C756C0D005B2384 /* HomeViewController.swift */,
 				B21A14242C757DD7005B2384 /* HomeViewModel.swift */,
+				B21A145A2C77D1D0005B2384 /* HomeCoordinator.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -357,11 +380,11 @@
 		B21A143A2C7765A3005B2384 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				B21A143C2C7765C7005B2384 /* Montserrat-Bold.ttf */,
-				B21A143E2C7765C7005B2384 /* Montserrat-ExtraBold.ttf */,
-				B21A143B2C7765C6005B2384 /* Montserrat-Medium.ttf */,
-				B21A143D2C7765C7005B2384 /* Montserrat-Regular.ttf */,
-				B21A143F2C7765C7005B2384 /* Montserrat-SemiBold.ttf */,
+				B21A143C2C7765C7005B2384 /* MontserratBold.ttf */,
+				B21A143E2C7765C7005B2384 /* MontserratExtraBold.ttf */,
+				B21A143B2C7765C6005B2384 /* MontserratMedium.ttf */,
+				B21A143D2C7765C7005B2384 /* MontserratRegular.ttf */,
+				B21A143F2C7765C7005B2384 /* MontserratSemiBold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -374,6 +397,42 @@
 				B21A14502C778729005B2384 /* SpotlightCardViewCell.swift */,
 			);
 			path = Spotlight;
+			sourceTree = "<group>";
+		};
+		B21A14542C77D00F005B2384 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B21A14552C77D01F005B2384 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B21A145C2C77DF28005B2384 /* HomeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B21A14662C781291005B2384 /* Model */,
+				B21A145F2C77DF4C005B2384 /* View */,
+				B21A145D2C77DF37005B2384 /* HomeDetailViewController.swift */,
+				B21A14642C78126B005B2384 /* HomeDetailViewModel.swift */,
+				B21A14622C77E1E8005B2384 /* HomeDetailCoordinator.swift */,
+			);
+			path = HomeDetail;
+			sourceTree = "<group>";
+		};
+		B21A145F2C77DF4C005B2384 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B21A14602C77DF61005B2384 /* HomeDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B21A14662C781291005B2384 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B21A14672C78129C005B2384 /* HomeDetailModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B2C4C7C32C741ACE0001A9DD = {
@@ -533,12 +592,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B21A14412C7765C7005B2384 /* Montserrat-Bold.ttf in Resources */,
-				B21A14432C7765C7005B2384 /* Montserrat-ExtraBold.ttf in Resources */,
+				B21A14412C7765C7005B2384 /* MontserratBold.ttf in Resources */,
+				B21A14432C7765C7005B2384 /* MontserratExtraBold.ttf in Resources */,
 				B2C4C7D92C741ACF0001A9DD /* Assets.xcassets in Resources */,
-				B21A14442C7765C7005B2384 /* Montserrat-SemiBold.ttf in Resources */,
-				B21A14402C7765C7005B2384 /* Montserrat-Medium.ttf in Resources */,
-				B21A14422C7765C7005B2384 /* Montserrat-Regular.ttf in Resources */,
+				B21A14442C7765C7005B2384 /* MontserratSemiBold.ttf in Resources */,
+				B21A14402C7765C7005B2384 /* MontserratMedium.ttf in Resources */,
+				B21A14422C7765C7005B2384 /* MontserratRegular.ttf in Resources */,
 				B2C4C7DC2C741ACF0001A9DD /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,18 +624,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				B21A14362C76BF8B005B2384 /* UIImageView+Extensions.swift in Sources */,
+				B21A146A2C781C19005B2384 /* UIButton+Extensions.swift in Sources */,
 				B21A144A2C776A6F005B2384 /* String+Extensions.swift in Sources */,
 				B21A14342C76BD50005B2384 /* UICollectionView+Extensions.swift in Sources */,
 				B21A14232C757AA7005B2384 /* HomeService.swift in Sources */,
 				B21A14252C757DD7005B2384 /* HomeViewModel.swift in Sources */,
 				B21A13F32C7427BD005B2384 /* DigioNetworkBaseError.swift in Sources */,
+				B21A14562C77D01F005B2384 /* Coordinator.swift in Sources */,
 				B21A14462C77669C005B2384 /* DigioFont.swift in Sources */,
+				B21A14652C78126B005B2384 /* HomeDetailViewModel.swift in Sources */,
 				B21A14132C7576D6005B2384 /* HomeResponse.swift in Sources */,
 				B21A13DB2C7420F1005B2384 /* CodeViewProtocol.swift in Sources */,
 				B21A13EB2C7425DE005B2384 /* DigioBaseServiceProtocol.swift in Sources */,
 				B21A144F2C778629005B2384 /* SpotlightCardCarrousselView.swift in Sources */,
 				B21A142E2C76A4A9005B2384 /* ProductCardViewCell.swift in Sources */,
 				B21A141C2C75790B005B2384 /* ListHomeModel.swift in Sources */,
+				B21A14682C78129C005B2384 /* HomeDetailModel.swift in Sources */,
 				B21A14482C776885005B2384 /* UIColor+Extensions.swift in Sources */,
 				B21A14112C757688005B2384 /* CashResponse.swift in Sources */,
 				B21A14202C757A23005B2384 /* HomeRequest.swift in Sources */,
@@ -593,14 +656,19 @@
 				B21A14512C778729005B2384 /* SpotlightCardViewCell.swift in Sources */,
 				B2C4C7D02C741ACE0001A9DD /* AppDelegate.swift in Sources */,
 				B2C4C7D22C741ACE0001A9DD /* SceneDelegate.swift in Sources */,
+				B21A14612C77DF61005B2384 /* HomeDetailView.swift in Sources */,
+				B21A14592C77D082005B2384 /* DigioCoordinator.swift in Sources */,
 				B21A140F2C75766F005B2384 /* ProductResponse.swift in Sources */,
 				B21A14092C756C0D005B2384 /* HomeViewController.swift in Sources */,
 				B21A13E72C742561005B2384 /* HTTPMethod.swift in Sources */,
 				B21A13EF2C7426CA005B2384 /* RequestProtocol.swift in Sources */,
 				B21A14272C758398005B2384 /* HomeView.swift in Sources */,
 				B21A14392C76D75D005B2384 /* DigioProductView.swift in Sources */,
+				B21A145E2C77DF37005B2384 /* HomeDetailViewController.swift in Sources */,
+				B21A145B2C77D1D0005B2384 /* HomeCoordinator.swift in Sources */,
 				B21A13ED2C7425FA005B2384 /* DigioBaseService.swift in Sources */,
 				B21A142B2C76A1C5005B2384 /* ProductCardView.swift in Sources */,
+				B21A14632C77E1E8005B2384 /* HomeDetailCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,7 +19,7 @@ class DigioProductView: UIView {
     private lazy var titleLabel: UILabel = {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.font = UIFont.boldSystemFont(ofSize: 20.0)
+        title.font = UIFont(name: "MontserratSemiBold", size: 20.0)
         title.textColor = .digioBlue
         return title
     }()

@@ -13,24 +13,28 @@ protocol HomeViewControllerProtocol: AnyObject {
 
 class HomeViewController: UIViewController {
     
-    private let viewModel: HomeViewModelProtocol
+    private var viewModel: HomeViewModelProtocol
     private let homeView: HomeViewProtocol
+    private var coordinator: HomeCoordinatorProtocol?
     
-    init(viewModel: HomeViewModelProtocol, homeView: HomeViewProtocol) {
+    init(viewModel: HomeViewModelProtocol,
+         homeView: HomeViewProtocol,
+         coordinator: HomeCoordinatorProtocol) {
         self.viewModel = viewModel
         self.homeView = homeView
+        self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
         self.viewModel.delegate = self
+        self.homeView.delegate = self
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Home"
+        
         view.backgroundColor = .white
         viewModel.fetchHome()
     }
@@ -45,5 +49,11 @@ extension HomeViewController: HomeViewControllerProtocol {
         homeView.productsModel = model.products
         homeView.cashModelModel = model.cash
         homeView.spotLightModel = model.spotlight
+    }
+}
+
+extension HomeViewController: HomeViewDelegate {
+    func didTapOpenDetailProduct(model: ProductModel) {
+        coordinator?.openDetailView(model: .init(title: model.name, imageURL: model.imageURL, description: model.description))
     }
 }

@@ -18,7 +18,7 @@ final class ProductCardCarrousselView: UIView {
     
     private lazy var title: UILabel = {
         let label = UILabel()
-        label.font = UIFont.FontExtraBold(size: 20.0)
+        label.font = .FontExtraSemiBold(size: 20)//UIFont.FontExtraBold(size: 20.0)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .digioBlue
         label.text = "Produtos"
@@ -46,6 +46,8 @@ final class ProductCardCarrousselView: UIView {
             }
         }
     }
+    
+    var didTapAction: ((ProductModel) -> Void)?
     
     init() {
         super.init(frame: .zero)
@@ -77,6 +79,15 @@ extension ProductCardCarrousselView: UICollectionViewDataSource {
             cell.configure(model: product[indexPath.row])
         }
         return cell
+    }
+}
+
+extension ProductCardCarrousselView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let productModel = model {
+            let model = productModel[indexPath.row]
+            didTapAction?(model)
+        }
     }
 }
 

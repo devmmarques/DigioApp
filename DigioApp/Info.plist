@@ -4,11 +4,11 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Montserrat-Bold</string>
-		<string>Montserrat-ExtraBold</string>
-		<string>Montserrat-Medium</string>
-		<string>Montserrat-Regular</string>
-		<string>Montserrat-SemiBold</string>
+		<string>MontserratBold</string>
+		<string>MontserratExtraBold</string>
+		<string>MontserratMedium</string>
+		<string>MontserratRegular</string>
+		<string>MontserratSemiBold</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

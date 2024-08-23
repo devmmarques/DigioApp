@@ -17,7 +17,7 @@ extension UIImageView {
         self.addSubview(indicatorView)
         
         indicatorView.centerXAnchor(equalTo: self.centerXAnchor).centerYAnchor(equalTo: self.centerYAnchor)
-        
+        let imagePlaceholder = UIImage(named: "placeholderImage")
         guard let baseUrl = URL(string: url) else { return }
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: baseUrl) {
@@ -27,12 +27,14 @@ extension UIImageView {
                         indicatorView.stopAnimating()
                         indicatorView.removeFromSuperview()
                     } else {
+                        self?.image = imagePlaceholder
                         indicatorView.stopAnimating()
                         indicatorView.removeFromSuperview()
                     }
                 }
             } else {
                 DispatchQueue.main.async {
+                    self?.image = imagePlaceholder
                     indicatorView.stopAnimating()
                     indicatorView.removeFromSuperview()
                 }

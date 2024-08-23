@@ -8,9 +8,14 @@
 import UIKit
 
 protocol HomeViewProtocol: UIView {
+    var delegate: HomeViewDelegate? { get set }
     var productsModel: [ProductModel] { get set }
     var cashModelModel: CashModel? { get set }
     var spotLightModel: [SpotlightModel] { get set }
+}
+
+protocol HomeViewDelegate: AnyObject {
+    func didTapOpenDetailProduct(model: ProductModel)
 }
 
 final class HomeView: UIView, HomeViewProtocol {
@@ -44,6 +49,10 @@ final class HomeView: UIView, HomeViewProtocol {
     private lazy var homeProduts: ProductCardCarrousselView = {
         let view = ProductCardCarrousselView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.didTapAction = { [weak self] model in
+            guard let self = self else { return }
+            self.delegate?.didTapOpenDetailProduct(model: model)
+        }
         return view
     }()
     
@@ -59,6 +68,7 @@ final class HomeView: UIView, HomeViewProtocol {
         return view
     }()
     
+    weak var delegate: HomeViewDelegate?
     // MARK: Properties
     var productsModel: [ProductModel] = [] {
         didSet {
