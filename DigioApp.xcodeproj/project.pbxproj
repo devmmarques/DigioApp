@@ -70,6 +70,11 @@
 		B21A147D2C78D24E005B2384 /* DigioAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A147C2C78D24E005B2384 /* DigioAlertView.swift */; };
 		B21A147F2C7908D4005B2384 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A147E2C7908D4005B2384 /* BaseViewController.swift */; };
 		B21A14812C790D3E005B2384 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14802C790D3E005B2384 /* AlertViewModel.swift */; };
+		B21A14842C791CD7005B2384 /* HomeServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14832C791CD7005B2384 /* HomeServiceMock.swift */; };
+		B21A14862C791D02005B2384 /* HomeViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14852C791D02005B2384 /* HomeViewControllerMock.swift */; };
+		B21A14882C791D61005B2384 /* HomeCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14872C791D61005B2384 /* HomeCoordinatorMock.swift */; };
+		B21A148A2C791E0C005B2384 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A14892C791E0C005B2384 /* HomeViewModelTests.swift */; };
+		B21A148C2C791E96005B2384 /* ModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A148B2C791E96005B2384 /* ModelMock.swift */; };
 		B2C4C7D02C741ACE0001A9DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7CF2C741ACE0001A9DD /* AppDelegate.swift */; };
 		B2C4C7D22C741ACE0001A9DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4C7D12C741ACE0001A9DD /* SceneDelegate.swift */; };
 		B2C4C7D92C741ACF0001A9DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C4C7D82C741ACF0001A9DD /* Assets.xcassets */; };
@@ -159,6 +164,11 @@
 		B21A147C2C78D24E005B2384 /* DigioAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioAlertView.swift; sourceTree = "<group>"; };
 		B21A147E2C7908D4005B2384 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B21A14802C790D3E005B2384 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		B21A14832C791CD7005B2384 /* HomeServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceMock.swift; sourceTree = "<group>"; };
+		B21A14852C791D02005B2384 /* HomeViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerMock.swift; sourceTree = "<group>"; };
+		B21A14872C791D61005B2384 /* HomeCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorMock.swift; sourceTree = "<group>"; };
+		B21A14892C791E0C005B2384 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		B21A148B2C791E96005B2384 /* ModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMock.swift; sourceTree = "<group>"; };
 		B2C4C7CC2C741ACE0001A9DD /* DigioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C4C7CF2C741ACE0001A9DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2C4C7D12C741ACE0001A9DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -502,6 +512,26 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
+		B21A14822C791CA4005B2384 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B21A148D2C792D3E005B2384 /* Mock */,
+				B21A14892C791E0C005B2384 /* HomeViewModelTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B21A148D2C792D3E005B2384 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				B21A14832C791CD7005B2384 /* HomeServiceMock.swift */,
+				B21A14852C791D02005B2384 /* HomeViewControllerMock.swift */,
+				B21A14872C791D61005B2384 /* HomeCoordinatorMock.swift */,
+				B21A148B2C791E96005B2384 /* ModelMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		B2C4C7C32C741ACE0001A9DD = {
 			isa = PBXGroup;
 			children = (
@@ -541,6 +571,7 @@
 		B2C4C7E52C741ACF0001A9DD /* DigioAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				B21A14822C791CA4005B2384 /* Home */,
 				B21A13F82C756640005B2384 /* Network */,
 			);
 			path = DigioAppTests;
@@ -753,9 +784,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B21A14042C756A2B005B2384 /* ModelMockCodable.swift in Sources */,
+				B21A148C2C791E96005B2384 /* ModelMock.swift in Sources */,
 				B21A13FD2C75681E005B2384 /* MockURLSessionDataTask.swift in Sources */,
 				B21A13FF2C756850005B2384 /* DigioBaseServiceTests.swift in Sources */,
+				B21A14882C791D61005B2384 /* HomeCoordinatorMock.swift in Sources */,
 				B21A14012C756993005B2384 /* MockRequest.swift in Sources */,
+				B21A148A2C791E0C005B2384 /* HomeViewModelTests.swift in Sources */,
+				B21A14842C791CD7005B2384 /* HomeServiceMock.swift in Sources */,
+				B21A14862C791D02005B2384 /* HomeViewControllerMock.swift in Sources */,
 				B21A13FB2C75666E005B2384 /* MockURLSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

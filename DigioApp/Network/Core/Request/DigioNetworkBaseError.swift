@@ -14,5 +14,6 @@ enum DigioNetworkBaseError: Error {
     case badRequest
     case unauthorized
     case clientError
+    case unknown
     
 }

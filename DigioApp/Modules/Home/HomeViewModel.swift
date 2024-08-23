@@ -38,7 +38,7 @@ extension HomeViewModel: HomeViewModelProtocol {
             case .success(let data):
                 let homeModel = ListHomeModel(spotlight: data.spotlight, products: data.products, cash: data.cash)
                 delegate?.update(model: homeModel)
-            case .failure(let error):
+            case .failure:
                 coordinator?.showAlert(alert: .init(status: .error,
                                                     title: "Erro ao carregar",
                                                     description: "Não foi possível carregar os dados \n Deseja tentar novamente ?",
