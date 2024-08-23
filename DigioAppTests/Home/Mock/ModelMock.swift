@@ -23,4 +23,5 @@ struct ModelMock {
     
     static let homeResponse = HomeResponse(spotlight: [spotlightResponse], products: [productResponse], cash: cashResponse)
     
+    
 }
